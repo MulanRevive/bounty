@@ -1,0 +1,67 @@
+作者：yang leonier
+链接：https://www.zhihu.com/question/366509495/answer/975810766
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+func fcompare(d1,d2) {
+	if(d1>d2) {
+		return true
+	} else {
+		return false
+	}
+}
+
+func main() {
+	st = ""
+	logfile = open ("log.txt", "w+")
+
+	list1=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+	println (typeof(ARGV))
+	print ("Phase 1 \n", file=logfile)
+
+	y = year()
+
+	if (y==2020) {
+		println ("African agriculture is undeveloped, Jinkela is required!")
+		println ("It's "+list1[month()-1] + " " + str(day())+ ", "+str(y))
+	}
+	print ("Phase 2 \n", file=logfile)
+
+	for i in range(0,10) {
+		println ("Hello, World!" + " " + str(i) )
+	}
+	print ("Phase 3 \n", file=logfile)
+
+	s = ""
+	list2=["Reimu", "Marisa", "Yuka", "Cirno", "Meilin", "Remilia", "Flandre", "Yomu", "Yuyuko", "Suwako"]
+	for st in list2 {
+		s=s+st+" "
+	}
+	println (s)
+	s = ""
+	list3=reverse(list2)
+	for st in list3 {
+		s=s+st+" "
+	}
+	println (s)
+	temp = ""
+	for i in range(0, len(list2)-1) {
+		for j in range(0, len(list2)-1-i) {
+			if (fcompare(list2[j],list2[j+1])) {
+				temp=list2[j]
+				list2[j]=list2[j+1]
+				list2[j+1]=temp
+			}
+		}
+	}
+	s = ""
+	for st in list2 {
+		s=s+st+" "
+	}
+	println (s)
+	print ("Phase 4 \n",file=logfile)
+}
+
+if(__name__ == "__main__") {
+	main()
+}
