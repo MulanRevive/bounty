@@ -6,4 +6,14 @@
 - 代码难以自动测试
 - 用python官方入门文档无法涵盖大部分用例
 
-下面打算根据[Lua](https://www.lua.org/manual/5.3/), [Python](https://docs.python.org/3/reference/)等的Language Specification文档进行测试验证。
+下面的语言设计文档参考[Lua](https://www.lua.org/manual/5.3/), [Python](https://docs.python.org/3/reference/)等。使用原版exe进行测试验证，并且形成测试代码集。
+
+### 一、简介
+
+
+### 二、基本概念
+
+
+### 
+
+【待续】
