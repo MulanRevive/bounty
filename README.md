@@ -36,3 +36,5 @@
 #### 1 月 26 日
 
 祝贺！第一笔款项[已支付](https://github.com/MulanRevive/bounty/issues/1#issuecomment-578504572)！
+
+正式提出[项目目标](复现文档/README.md)。
