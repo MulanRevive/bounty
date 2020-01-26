@@ -31,7 +31,22 @@
 
 nil 只有“空”值，与其他所有值不同，用于表示有用值的反面。
 
-布尔值有 true/false 两种值。nil 和 false 都使条件为假；任何其他值都为真。【待测试】
+布尔值有 true/false 两种值。nil 和 false 都使条件为假；任何其他值都为真。
+```python
+> nil
+> nil or "a"
+a
+> nil and 10
+> false or nil
+> nil or false
+false
+> if (nil) {
+>>   print(2)
+>> } else {
+>>   print(1)
+>> }
+1>
+```
 
 数包括整数和小数。
 
