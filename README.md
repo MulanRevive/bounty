@@ -32,3 +32,7 @@
 号外！悬赏发布短短数小时之后，就有首位响应者[提交了实现代码](https://github.com/MulanRevive/bounty/issues/1)。让我们一同研究一下。
 
 开始编写[「木兰」语言设计文档](复现文档/README.md)。
+
+#### 1 月 26 日
+
+祝贺！第一笔款项[已支付](https://github.com/MulanRevive/bounty/issues/1#issuecomment-578504572)！
