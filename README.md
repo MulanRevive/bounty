@@ -42,3 +42,11 @@
 #### 1 月 27 日
 
 感激！刚收到[第一笔赞助](https://github.com/MulanRevive/bounty/issues/3#issuecomment-578561078)！
+
+#### 1 月 28 日
+
+已向第一位参与者付酬金[累计 ￥954.88](https://github.com/MulanRevive/bounty/issues/3#issuecomment-579533880)。
+
+创建细分悬赏任务：
+- [建立简易账本系统](https://github.com/MulanRevive/bounty/issues/5)
+- [对原始可执行文件的功能进行测试](https://github.com/MulanRevive/bounty/issues/4)
