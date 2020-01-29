@@ -11,21 +11,21 @@ option "operating_currency" "CNY" ; The main currencies you use
 
 ** Opening Balances
 2020-01-25 * "Opening Balances"
-    Income:Donation:赞助者0          -10000.00 CNY
-    Assets:Budget:总预算                    10000.00 CNY
+    Income:Donation:赞助者0             -10000.00 CNY
+    Assets:Budget:总预算                10000.00 CNY
 
 2020-01-26 open Expenses:Bounty:贡献者1
 
 2020-01-26 * "向第一位付酬金；追加投资"
-    Expenses:Bounty:贡献者1           154.88 CNY
-    Income:Donation:赞助者0           -154.88 CNY
+    Expenses:Bounty:贡献者1             154.88 CNY
+    Income:Donation:赞助者0             -154.88 CNY
 
 2020-01-27 open Income:Donation:赞助者1
 
 2020-01-27 * "第一位赞助者"
-    Income:Donation:赞助者1           -50 CNY
-    Assets:Budget:总预算                    50 CNY
+    Income:Donation:赞助者1             -50 CNY
+    Assets:Budget:总预算                50 CNY
 
 2020-01-28 * "向第一位付酬金"
-    Expenses:Bounty:贡献者1           800.00 CNY
-    Income:Donation:赞助者0                   -800.00 CNY
+    Expenses:Bounty:贡献者1             800.00 CNY
+    Income:Donation:赞助者0             -800.00 CNY
