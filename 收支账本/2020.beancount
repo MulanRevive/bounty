@@ -6,13 +6,13 @@ option "operating_currency" "CNY" ; The main currencies you use
 ** Accounts ; Open all the accounts you have
 ; all dates are Beijing time
 
-2020-01-25 open Assets:Budget:Total
+2020-01-25 open Assets:Budget:总预算
 2020-01-25 open Income:Donation:赞助者0
 
 ** Opening Balances
 2020-01-25 * "Opening Balances"
     Income:Donation:赞助者0          -10000.00 CNY
-    Assets:Budget:Total                    10000.00 CNY
+    Assets:Budget:总预算                    10000.00 CNY
 
 2020-01-26 open Expenses:Bounty:贡献者1
 
@@ -24,7 +24,7 @@ option "operating_currency" "CNY" ; The main currencies you use
 
 2020-01-27 * "第一位赞助者"
     Income:Donation:赞助者1           -50 CNY
-    Assets:Budget:Total                    50 CNY
+    Assets:Budget:总预算                    50 CNY
 
 2020-01-28 * "向第一位付酬金"
     Expenses:Bounty:贡献者1           800.00 CNY
