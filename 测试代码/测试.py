@@ -2,6 +2,12 @@ import subprocess
 
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
+    "if.mulan": b'1',
+    "if_else.mulan": b'2',
+    "if_elif.mulan": b'1',
+    "if_elif_else.mulan": b'3',
+    "stmt_if_true.mulan": b'4',
+    "stmt_if_false.mulan": b'',
     "while.mulan": b'10',
     "loop.mulan": b'6'
 }
