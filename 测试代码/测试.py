@@ -2,8 +2,8 @@ import subprocess
 
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
-    "while.ul": b'10',
-    "loop.ul": b'6'
+    "while.mulan": b'10',
+    "loop.mulan": b'6'
 }
 
 for 文件 in 期望值:
