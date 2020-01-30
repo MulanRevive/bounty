@@ -1,11 +1,13 @@
 import subprocess
 
+# 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
     "while.ul": b'10',
     "loop.ul": b'6'
 }
 
 for 文件 in 期望值:
+    # 参考：https://stackoverflow.com/questions/748028/how-to-get-output-of-exe-in-python-script
     进程 = subprocess.Popen(["..\\原始资料\\可执行文件\\ulang-0.2.2.exe", 文件], stdout=subprocess.PIPE)
     输出 = 进程.communicate()[0]
     if 输出 == 期望值[文件]:
