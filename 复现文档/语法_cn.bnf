@@ -1,0 +1,10 @@
+if声明      : IF 表达式 代码块 elif声明
+            | IF 表达式 代码块 ELSE 代码块
+            | 声明 IF 表达式
+
+elif声明    :
+            | ELIF 表达式 代码块 elif声明
+            | ELIF 表达式 代码块 ELSE 代码块
+
+while声明   : WHILE 表达式 代码块
+            | LOOP 代码块
