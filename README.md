@@ -50,3 +50,7 @@
 创建细分悬赏任务：
 - [建立简易账本系统](https://github.com/MulanRevive/bounty/issues/5)
 - [对原始可执行文件的功能进行测试](https://github.com/MulanRevive/bounty/issues/4)
+
+#### 1 月 29 日
+
+学习rply用法并通过分析逆向工程获取while和loop的语法并通过[测试代码](https://github.com/MulanRevive/bounty/issues/4#issuecomment-580095743)。
