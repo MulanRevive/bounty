@@ -1,0 +1,10 @@
+if_stmt     : IF expr block elif_stmt
+            | IF expr block ELSE block
+            | stmt IF expr
+
+elif_stmt   :
+            | ELIF expr block elif_stmt
+            | ELIF expr block ELSE block
+
+while_stmt  : WHILE expr block
+            | LOOP block
