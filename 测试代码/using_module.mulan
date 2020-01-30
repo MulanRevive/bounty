@@ -1,0 +1,3 @@
+using * in module_talk
+
+talk()

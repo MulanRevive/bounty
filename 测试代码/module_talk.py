@@ -1,0 +1,2 @@
+def talk():
+    print("hi")
