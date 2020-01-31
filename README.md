@@ -56,3 +56,7 @@
 学习rply用法并通过分析逆向工程获取while和loop的语法并通过[测试代码](https://github.com/MulanRevive/bounty/issues/4#issuecomment-580095743)。
 
 用[脚本](测试代码/README.md)自动运行循环语法的测试，暂时依赖打印输出。exe启动时间较长，大约2秒一个测试，需改进。将在摸索各语法规则时添加对应测试代码。
+
+#### 1 月 30 日
+
+继续分析语法，if/导入模块等等。开始编写[用户手册](https://github.com/MulanRevive/bounty/blob/master/%E5%A4%8D%E7%8E%B0%E6%96%87%E6%A1%A3/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/%E5%9F%BA%E6%9C%AC.md)。
