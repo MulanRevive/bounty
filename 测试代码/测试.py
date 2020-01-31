@@ -2,6 +2,10 @@ import subprocess
 
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
+    "for_colon.mulan": b'6',
+    "for_in.mulan": b'10',
+    "stmt_for_in.mulan": b'3',
+    "stmt_for_colon.mulan": b'5',
     "using_mulan_module.mulan": b'ho',
     "using_python_module.mulan": b'hi\r\n',
     "if.mulan": b'1',
@@ -22,3 +26,5 @@ for 文件 in 期望值:
         print("通过： " + 文件)
     else:
         print("失败： " + 文件 + " 期望：" + str(期望值[文件]) + " 实际：" + str(输出))
+        break
+
