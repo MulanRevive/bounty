@@ -25,11 +25,19 @@ import subprocess
 for 文件 in 期望值:
     进程表[文件] = subprocess.Popen(["..\\原始资料\\可执行文件\\ulang-0.2.2.exe", 文件], stdout=subprocess.PIPE)
 
+失败表 = {}
+
 for 文件 in 进程表:
     输出 = 进程表[文件].communicate()[0]
     if 输出 == 期望值[文件]:
         print("通过： " + 文件)
     else:
-        print("失败： " + 文件 + " 期望：" + str(期望值[文件]) + " 实际：" + str(输出))
-        break
+        失败表[文件] = 输出
+
+print("===================")
+if len(失败表) > 0:
+    for 文件 in 失败表:
+        print("失败： " + 文件 + " 期望：" + str(期望值[文件]) + " 实际：" + str(失败表[文件]))
+else:
+    print("！全部通过！")
 
