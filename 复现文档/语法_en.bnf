@@ -8,3 +8,14 @@ elif_stmt   :
 
 while_stmt  : WHILE expr block
             | LOOP block
+
+using_stmt  : USING module_names IN module_name_
+            | USING * IN module_name_
+            | USING module_names
+
+module_names    : module_name
+                | module_names , module_name
+
+module_name_    : module_name
+                | DOTDOT
+                | DOT
