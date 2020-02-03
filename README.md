@@ -60,3 +60,15 @@
 #### 1 月 30 日
 
 继续分析语法，if/导入模块等等。开始编写[用户手册](https://github.com/MulanRevive/bounty/blob/master/%E5%A4%8D%E7%8E%B0%E6%96%87%E6%A1%A3/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/%E5%9F%BA%E6%9C%AC.md)。
+
+#### 1 月 31 日
+
+继续基于逆向工程中的 ply 代码，确认语法和功能。编写用户手册第二章——[控制走向](https://zhuanlan.zhihu.com/p/104548740)
+
+#### 2 月 1 日
+
+尝试了基于「木兰」定制[新语法](https://zhuanlan.zhihu.com/p/104723661)，比较简单。
+
+#### 2 月 3 日
+
+木兰编程语言[知乎专栏]((https://zhuanlan.zhihu.com/ulang))创建，收录了之前的文章，欢迎指教。
