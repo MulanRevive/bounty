@@ -71,4 +71,4 @@
 
 #### 2 月 3 日
 
-木兰编程语言[知乎专栏]((https://zhuanlan.zhihu.com/ulang))创建，收录了之前的文章，欢迎指教。
+木兰编程语言[知乎专栏](https://zhuanlan.zhihu.com/ulang)创建，收录了之前的文章，欢迎指教。
