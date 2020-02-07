@@ -2,4 +2,4 @@ func count {
     print("123")
 }
 
-count()
+count
