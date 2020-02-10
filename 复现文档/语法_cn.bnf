@@ -8,3 +8,64 @@ elif声明    :
 
 while声明   : WHILE 表达式 代码块
             | LOOP 代码块
+
+引用声明     : USING 模块名称 IN 单模块名_
+            | USING * IN 单模块名_
+            | USING 模块名称
+
+模块名称     : 单模块名
+            | 模块名称 , 单模块名
+
+单模块名_    : 单模块名
+            | DOTDOT
+            | DOT
+
+中止声明     : BREAK
+
+接续声明     : CONTINUE
+
+块          : ;
+            | LBRACE 声明列表 RBRACE
+
+for声明     : FOR iterator IN 循环范围 块
+            | FOR iterator : 循环范围 块
+            | 声明 FOR iterator IN 循环范围
+            | 声明 FOR iterator : 循环范围
+
+循环范围     : 表达式
+
+范围表达式    : 表达式 DOTDOT 表达式
+            | 表达式 DOTDOTLT 表达式
+            | 范围表达式 BY 表达式
+
+函数        : FUNC IDENTIFIER ( 参数列表 ) 块
+            | FUNC IDENTIFIER 块
+            | FUNC IDENTIFIER ( 参数列表 ) : 类型名称 块
+            | FUNC IDENTIFIER : 类型名称 块
+
+类型名称     : 名称
+            | 类型名称 [ 类型列表 ]
+
+类型列表     : 类型名称
+            | 类型列表 , 类型名称
+
+类型定义     : TYPE 名称 bases type_body
+
+bases       :
+            | : prefix_expr
+            | : prefix_exprs
+
+type_body   : LBRACE 多类型声明 RBRACE
+
+多类型声明    :
+            | 多类型声明 类型声明
+
+类型声明     : 块
+            | type_define
+            | operator
+            | 函数
+            | 属性
+
+属性        : ATTR IDENTIFIER 块
+            | ATTR IDENTIFIER ( ) 块
+            | ATTR IDENTIFIER = ( 参数 ) 块

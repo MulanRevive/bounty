@@ -32,6 +32,8 @@ for_stmt    : FOR iterator IN loop_range block
             | stmt FOR iterator IN loop_range
             | stmt FOR iterator : loop_range
 
+loop_range  : expr
+
 range_expr  : expr DOTDOT expr
             | expr DOTDOTLT expr
             | range_expr BY expr
