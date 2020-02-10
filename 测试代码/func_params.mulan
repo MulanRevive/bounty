@@ -1,0 +1,5 @@
+func count(n) {
+    print(n)
+}
+
+count(1)

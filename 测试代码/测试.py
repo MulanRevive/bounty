@@ -2,6 +2,9 @@ import subprocess
 
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
+    "type.mulan": b'Mulan',
+    "func_no_params.mulan": b'123',
+    "func_params.mulan": b'1',
     "break.mulan": b'012',
     "continue.mulan": b'01245',
     "range.mulan": b'012123-113',
