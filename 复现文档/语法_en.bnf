@@ -19,3 +19,53 @@ module_names    : module_name
 module_name_    : module_name
                 | DOTDOT
                 | DOT
+
+break_stmt  : BREAK
+
+continue_stmt : CONTINUE
+
+block       : ;
+            | LBRACE stmt_list RBRACE
+
+for_stmt    : FOR iterator IN loop_range block
+            | FOR iterator : loop_range block
+            | stmt FOR iterator IN loop_range
+            | stmt FOR iterator : loop_range
+
+loop_range  : expr
+
+range_expr  : expr DOTDOT expr
+            | expr DOTDOTLT expr
+            | range_expr BY expr
+
+function    : FUNC IDENTIFIER ( param_list ) block
+            | FUNC IDENTIFIER block
+            | FUNC IDENTIFIER ( param_list ) : type_name block
+            | FUNC IDENTIFIER : type_name block
+
+type_name   : name
+            | type_name [ type_list ]
+
+type_list   : type_name
+            | type_list , type_name
+
+type_define : TYPE name bases type_body
+
+bases       :
+            | : prefix_expr
+            | : prefix_exprs
+
+type_body   : LBRACE type_stmts RBRACE
+
+type_stmts  :
+            | type_stmts type_stmt
+
+type_stmt   : block
+            | type_define
+            | operator
+            | function
+            | property
+
+property    : ATTR IDENTIFIER block
+            | ATTR IDENTIFIER ( ) block
+            | ATTR IDENTIFIER = ( param ) block
