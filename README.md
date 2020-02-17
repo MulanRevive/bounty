@@ -76,3 +76,7 @@
 #### 2 月 7 日
 
 编写用户手册第三章——[函数和类型](https://zhuanlan.zhihu.com/p/105687154)，类型部分还有不少没有摸索出来。
+
+#### 2 月 14 日
+
+摸索导入[Python 模块](https://github.com/MulanRevive/bounty/issues/4#issuecomment-586520874)功能，有些疑问，需要对 Python 模块导入机制作深入研究。
