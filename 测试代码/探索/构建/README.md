@@ -128,3 +128,7 @@ TypeError: object of type 'int' has no len()
 ```
 
 不过[用的](https://github.com/MulanRevive/mulan/tree/31705846e538576c6fbe2754a919a07a86227600)并非原始的逆向工程，需要深究。
+
+试了[我修改之前的版本](https://github.com/MulanRevive/mulan/commit/fe5fefd38806e1955c236889f0e3eaf46df8c2f7)，仍然同样结果。
+
+也许要自己逆向一下。
