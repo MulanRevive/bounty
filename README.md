@@ -80,3 +80,7 @@
 #### 2 月 14 日
 
 摸索导入[Python 模块](https://github.com/MulanRevive/bounty/issues/4#issuecomment-586520874)功能，有些疑问，需要对 Python 模块导入机制作深入研究。
+
+#### 2 月 19 日
+
+初步构建可执行文件(https://zhuanlan.zhihu.com/p/107836848), 但测试未完全通过, 待深究.
