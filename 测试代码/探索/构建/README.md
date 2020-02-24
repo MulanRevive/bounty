@@ -100,7 +100,7 @@ ModuleNotFoundError: No module named 'win32com'
 26380 INFO: Building EXE from EXE-00.toc completed successfully.
 ```
 
-但，运行积累的测试用例未能完全通过：
+的确生成了 exe，但1）比原 exe 大一些，2）[积累的测试用例](https://github.com/MulanRevive/bounty/blob/master/%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/%E6%B5%8B%E8%AF%95.py)未能完全通过：
 ```
 TypeError: required field "lineno" missing from stmt
 通过： func_no_params.mulan
@@ -127,8 +127,12 @@ TypeError: object of type 'int' has no len()
 失败： if_elif_else.mulan 期望：b'3' 实际：b''
 ```
 
-不过[用的](https://github.com/MulanRevive/mulan/tree/31705846e538576c6fbe2754a919a07a86227600)并非原始的逆向工程，需要深究。
+先[用的](https://github.com/MulanRevive/mulan/tree/31705846e538576c6fbe2754a919a07a86227600)并非原始的逆向工程，再试了[我修改之前的版本](https://github.com/MulanRevive/mulan/commit/fe5fefd38806e1955c236889f0e3eaf46df8c2f7)，仍然同样结果。
 
-试了[我修改之前的版本](https://github.com/MulanRevive/mulan/commit/fe5fefd38806e1955c236889f0e3eaf46df8c2f7)，仍然同样结果。
+待深究。
+
+不过至少构建过程初步走通。
 
 也许要自己逆向一下。
+
+相关内容在：[MulanRevive/bounty](https://github.com/MulanRevive/bounty/tree/master/%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81/%E6%8E%A2%E7%B4%A2/%E6%9E%84%E5%BB%BA)
