@@ -1,0 +1,1 @@
+print(list(map(n -> n^2, 0..3)))
