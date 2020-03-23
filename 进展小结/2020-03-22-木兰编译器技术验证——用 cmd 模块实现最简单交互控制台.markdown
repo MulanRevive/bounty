@@ -1,0 +1,32 @@
+
+更多木兰相关文章，欢迎关注[木兰编程语言](https://zhuanlan.zhihu.com/ulang)知乎专栏。
+
+[木兰逆向工程中](https://github.com/MulanRevive/mulan/blob/1ba5bc26326a73c9dc0825a20c43e0ecdb933ccc/ulang/runtime/repl.py#L143)用了 cmd 模块实现控制台，而非像[前文](https://zhuanlan.zhihu.com/p/56411693)那样用 Interpreter 模块。猜测是因为前者的可定制性更强，走着看。
+
+作为技术验证的第一步，同样采用 cmd 模块，完成一个最简单控制台：打开后显示提示，quit 退出，仅此而已。
+
+```python
+import sys, cmd
+
+class 木兰(cmd.Cmd):
+    intro = "Welcome to ulang's REPL..\nType 'help' for more informations."
+    prompt = '> '
+
+    def do_quit(self, arg):
+        sys.exit()
+
+if __name__ == '__main__':
+    木兰().cmdloop()
+```
+
+运行效果：
+```
+$ python3 交互环境.py 
+Welcome to ulang's REPL..
+Type 'help' for more informations.
+> quit
+$
+```
+
+参考：
+[cmd — Support for line-oriented command interpreters¶](https://docs.python.org/3/library/cmd.html)
