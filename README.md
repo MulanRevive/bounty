@@ -100,3 +100,15 @@
 #### 3 月 18 日
 
 通过[修改逆向工程中的bug](https://zhuanlan.zhihu.com/p/114194675)，生成了exe能够通过所有当前测试用例。
+
+#### 3 月 22 日
+
+木兰编译器技术验证——[用 cmd 模块实现最简单交互控制台](https://zhuanlan.zhihu.com/p/115587722)
+
+#### 3 月 24 日
+
+木兰编译器技术验证——[交互控制台集成 rply 语法分析器](https://zhuanlan.zhihu.com/p/116663288)
+
+#### 3 月 25 日
+
+木兰编译器技术验证——[通过 AST 转换和 eval 实现语法定制](https://zhuanlan.zhihu.com/p/117481247)

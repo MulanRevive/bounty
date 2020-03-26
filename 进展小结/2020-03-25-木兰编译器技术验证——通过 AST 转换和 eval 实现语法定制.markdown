@@ -1,0 +1,78 @@
+
+续[前文](https://zhuanlan.zhihu.com/p/116663288)，不需自行定义[语法树类](https://github.com/program-in-chinese/study/blob/master/%E6%9C%A8%E5%85%B0/rply/%E5%85%A5%E9%97%A8/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/%E8%AF%AD%E6%B3%95%E6%A0%91%E7%B1%BB.py)，而是在语法分析时生成 Python 的 AST。
+
+演示运行效果如下：
+```
+$ python3 交互环境.py 
+Welcome to ulang's REPL..
+Type 'help' for more informations.
+> 3÷4
+0.75
+> 3×4
+12
+> quit
+
+```
+
+实现关键部分（可运行的在此）:
+```python
+分词器母机 = LexerGenerator()
+...
+分词器母机.add('乘', r'×')
+分词器母机.add('除', r'÷')
+...
+
+@分析器母机.production('表达式 : 数')
+def 数表达式(片段):
+    # 匹配规则右部的片段列表
+    return ast.Num((int(片段[0].getstr(), 0)),
+                    lineno=0,#(self.getlineno(p)),
+                    col_offset=0)
+
+@分析器母机.production('表达式 : 左括号 表达式 右括号')
+def 括号表达式(片段):
+    return 片段[1]
+
+@分析器母机.production('表达式 : 表达式 加 表达式')
+@分析器母机.production('表达式 : 表达式 减 表达式')
+@分析器母机.production('表达式 : 表达式 乘 表达式')
+@分析器母机.production('表达式 : 表达式 除 表达式')
+def 二元运算表达式(片段):
+    左 = 片段[0]
+    右 = 片段[2]
+    运算符 = 片段[1]
+    python运算 = 运算符
+    if 运算符.gettokentype() == '加':
+        python运算 = ast.Add()
+    elif 运算符.gettokentype() == '减':
+        python运算 = ast.Sub()
+    elif 运算符.gettokentype() == '乘':
+        python运算 = ast.Mult()
+    elif 运算符.gettokentype() == '除':
+        python运算 = ast.Div()
+    else:
+        raise AssertionError('不应出现')
+    return ast.Expression(
+        body=ast.BinOp(左,
+          python运算, 右,
+          lineno=0,
+          col_offset=0),
+        type_ignores=[])
+...
+class 木兰(cmd.Cmd):
+    ...
+
+    def default(self, line):
+        节点 = 分析器.parse(分词器.lex(line))
+        # print(ast.dump(节点))
+        代码 = compile(节点, '<STDIN>', 'eval')
+        print(eval(代码))
+...
+```
+上面的演示用了 eval，仅能解析单个表达式(Expression)。
+
+木兰的 repl 为了避免此限制，用的是 exec，不仅要生成`ast.Module`，而且还需添加`__print__`来打印出结果。
+
+慢慢来。
+
+## 更多木兰相关文章，欢迎关注[木兰编程语言](https://zhuanlan.zhihu.com/ulang)知乎专栏。
