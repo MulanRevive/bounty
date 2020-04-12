@@ -1,0 +1,27 @@
+之前有个挺郁闷的[问题](https://github.com/MulanRevive/mulan/issues/6)，在交互控制台下，只要有多行代码，就报错：
+```
+SyntaxError: File "<STDIN>", line 2:1, unexpected token "$end"
+```
+早先还想着是哪里词法分析的问题，后来才醒悟，[这里](https://github.com/MulanRevive/mulan/blob/7aff7abb405c68868a66d152f2a9d8ab6f74aeef/ulang/runtime/repl.py#L108)有个判断代码是否闭合，如果没闭合的话，理应不需词法分析，而应该换行后等待闭合。
+
+那么就基本确定是这个判断函数`is_close`的问题。
+
+（写到这里才发现早在两个半月前就[解决过这个问题](https://github.com/MulanRevive/mulan/issues/2)），二了。
+
+总之，解决办法就是修改一个 else 语句的整体缩进。
+
+还忍不住改了这行：
+```python
+if (last[0] == 'NEWLINE' or last[0]) == ';':
+```
+变为：
+```python
+if last[0] == 'NEWLINE' or last[0] == ';':
+```
+蹉跎了这么一大段，需要先想想下面该怎么进行。
+
+交互控制台（repl）部分的自动测试还没搭建，但这块也许有不少坑（像上面这种）。
+
+而代码的解析和运行并不依赖控制台。与其像[之前](https://zhuanlan.zhihu.com/p/117481247)那样在技术验证时就集成交互控制台，不如***抛开控制台，先专注于解析器的 AST 生成***。之前积累的[测试用例](https://zhuanlan.zhihu.com/p/114194675)可以用于验证实现正确性。
+
+之后，将按照此思路，先用中文命名的实现达成一个小目标：通过所有测试用例（以及期间添加的新测试）。
