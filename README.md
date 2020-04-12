@@ -112,3 +112,7 @@
 #### 3 月 25 日
 
 木兰编译器技术验证——[通过 AST 转换和 eval 实现语法定制](https://zhuanlan.zhihu.com/p/117481247)
+
+#### 4 月 10 日
+
+[木兰逆向工程中的 bug（三）——交互控制台，以及下一步](https://zhuanlan.zhihu.com/p/128981286)
