@@ -1,0 +1,41 @@
+
+![](截图/2020-04-17_rpython标题)
+
+***性急的请直接看文末。***
+## 环境搭建
+
+续[为何木兰采用 RPly 而非 Ply？RPython 和 PyPy 才是真意？](https://zhuanlan.zhihu.com/p/131780649)，忍不住想试试 RPython 的实测效果。于是找到此文档：[ Tutorial: Writing an Interpreter with PyPy, Part 1](https://morepypy.blogspot.com/2011/04/tutorial-writing-interpreter-with-pypy.html)
+
+从此下载例程：[Andrew Brown 的 pypy 入门](https://bitbucket.org/brownan/pypy-tutorial/src/default/)
+
+首先在 Mac 下用了 condo 创建了 python 2.7 环境， rpython 需要（可惜，貌似就不能用中文命名标识符了）。
+
+两种运行 rpython 的方法：
+
+1. 下载 pypy 源码，运行`$ python 【pypy 解压路径】/rpython/bin/rpython xxx.py`
+2. 下载 [DeloitteHux/cycy](https://github.com/DeloitteHux/cycy)，运行`pip install -e .`，也许可以单独安装 [rpython](https://pypi.org/project/rpython/) ？就可以运行`$ rpython --output=ex2 xxx.py`
+
+方法1 也许因为版本更新，翻译过程中警告信息少了些。
+
+注意下面将原本例程中的 example2.py（BrainFxxk 的解释器）文件改名，前面加了 "target"，但实际好像不需要 lol。
+## 性能比较
+
+在 python 2.7 环境中，直接运行这个解释器 ，生成一个分形图案。由于实在太慢，跑了 40 分钟强行中止。
+
+![](截图/2020-04-17_rpython之前)
+
+好戏开始，运行 rpython 后生成可执行文件，运行此可执行文件对原 BF 源码进行解释：
+```
+$ time ./ex2 mandel.b
+```
+效果如下，只用了 48 秒：
+
+![](截图/2020-04-17_rpython之后)
+
+如果只运行到之前那个位置，只需 6 秒不到：
+
+![](截图/2020-04-17_rpython部分)
+
+## 性能提升：40分钟/6秒=400 倍
+
+有点意思。
