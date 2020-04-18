@@ -1,0 +1,72 @@
+
+续[前文](https://zhuanlan.zhihu.com/p/129740212)，又添加了一个加法。[现在](https://github.com/MulanRevive/prototype/blob/513154e2d79cef349c1319cebe2d860c97151ec0/%E6%95%B0%E5%88%86%E6%9E%90%E5%99%A8.py)可以分析多项加法：`3+3+3`
+
+语法复杂了不少：
+
+```python
+分词器母机 = LexerGenerator()
+
+分词器母机.add('整数', r'\d+')
+分词器母机.add('加', '\\+')
+
+分词器 = 分词器母机.build()
+
+### 语法分析器部分
+
+分析器母机 = ParserGenerator(
+    # 所有词名
+    [
+        '整数',
+        '加'
+    ],
+    precedence=[
+        ('left', ['加']),
+    ]
+)
+
+# ast 参考: https://docs.python.org/3.7/library/ast.html#abstract-grammar
+
+@分析器母机.production('模块 : 表达式')
+def 模块(片段):
+    表达式 = 语法树.表达式(值 = 片段[0], 行号=0, 列号=0)
+    return 语法树.模块(主体=[表达式], 忽略类型=[])
+
+@分析器母机.production('表达式 : 二元表达式')
+@分析器母机.production('表达式 : 数')
+def 表达式(片段):
+    return 片段[0]
+
+@分析器母机.production('数 : 整数')
+def 数(片段):
+    数值 = int(片段[0].getstr(), 0)
+    return 语法树.数(数值, 行号=0, 列号=0)
+
+@分析器母机.production('二元表达式 : 表达式 加 表达式')
+def 二元表达式(片段):
+    左 = 片段[0]
+    右 = 片段[2]
+    运算符 = 片段[1].getstr()
+    python运算 = 运算符
+    if 运算符 == '+':
+        python运算 = ast.Add()
+    else:
+        breakpoint()
+    return 语法树.二元运算(左, python运算, 右, 行号=0, 列号=0)
+
+分析器 = 分析器母机.build()
+```
+
+注意这个运算符优先级声明：
+```python
+    precedence=[
+        ('left', ['加']),
+    ]
+```
+
+如果没有的话，就会报警告：
+```
+数分析器.py:53: ParserGeneratorWarning: 1 shift/reduce conflict
+  分析器 = 分析器母机.build()
+```
+
+这个问题挺难诊断，因为没有提示问题所在位置。需要调研是否有更加易于调试的辅助开发方式。另外，rply 文档有限，[ply 文档](http://www.dabeaz.com/ply/ply.html)可参考。上面这个问题就参考了其中的[Dealing With Ambiguous Grammars](http://www.dabeaz.com/ply/ply.html#ply_nn27)
