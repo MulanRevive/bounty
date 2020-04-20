@@ -1,0 +1,15 @@
+type Person {
+    {
+        name = "小白"
+    }
+
+    func $__init__(name) {
+        self.name = name
+    }
+}
+
+func shout(id): Person {
+    return Person(id)
+}
+
+print(shout("Mulan1").name)

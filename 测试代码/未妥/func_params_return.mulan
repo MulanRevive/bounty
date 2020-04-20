@@ -1,5 +1,0 @@
-func count(n): number {
-    return n
-}
-
-print(count(2))
