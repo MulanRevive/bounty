@@ -4,6 +4,13 @@ import subprocess
 
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
+    "加.ul": b'5',
+    "减.ul": b"1",
+    "乘.ul": b"6",
+    "除整.ul": b"2",
+    "除留整.ul": b"10",
+    "加小数.ul": b"5.0",
+    "除小数.ul": b"2.0",
     "func_params_return.mulan": b'Mulan1',
     "ternary.mulan": b'23',
     "lambda.mulan": b'[0, 1, 4, 9]',
