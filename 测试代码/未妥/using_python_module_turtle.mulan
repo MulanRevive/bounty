@@ -1,0 +1,12 @@
+using * in turtle
+
+color('yellow', 'red')
+begin_fill()
+
+for i in 0..4 {
+    forward(200)
+    right(144)
+}
+
+end_fill()
+done()

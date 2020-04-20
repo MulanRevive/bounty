@@ -1,5 +1,7 @@
 import subprocess
 
+路径 = '用例/'
+
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
     "ternary.mulan": b'23',
@@ -31,7 +33,8 @@ import subprocess
 
 # 参考：https://stackoverflow.com/questions/748028/how-to-get-output-of-exe-in-python-script
 for 文件 in 期望值:
-    进程表[文件] = subprocess.Popen(["..\\原始资料\\可执行文件\\ulang-0.2.2.exe", 文件], stdout=subprocess.PIPE)
+    print("开始测试：" + 文件)
+    进程表[文件] = subprocess.Popen(["..\\原始资料\\可执行文件\\ulang-0.2.2.exe", 路径 + 文件], stdout=subprocess.PIPE) #__main__
 
 失败表 = {}
 
