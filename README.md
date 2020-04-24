@@ -120,3 +120,10 @@
 #### 4 月 12 日
 
 木兰编译器技术验证——[源文件解析与 exec](https://zhuanlan.zhihu.com/p/129740212)
+
+#### 4 月
+
+- 15 日，暂时不实现 REPL 部分，开始搭建原型[加法部分](https://zhuanlan.zhihu.com/p/130906719)
+- 16 日，延伸调研 [RPly 和 PyPy](https://zhuanlan.zhihu.com/p/131780649)，作了简单[性能对比试验](https://zhuanlan.zhihu.com/p/132503029)
+- 19 日，原型搭建——[调用 print](https://zhuanlan.zhihu.com/p/133449850)
+- 21 日，原型搭建——[整数的減、乘、除](https://zhuanlan.zhihu.com/p/134029658)，其中除较特别
