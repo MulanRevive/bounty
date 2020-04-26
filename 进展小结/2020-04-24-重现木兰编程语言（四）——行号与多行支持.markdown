@@ -1,0 +1,106 @@
+
+[上文](https://zhuanlan.zhihu.com/p/134029658)说到每个语法树节点的行号和列号现在都是 0。首先确认它们是用在何处，就费了番功夫。ast 库[文档](https://docs.python.org/3.7/library/ast.html#ast.AST.col_offset)并未明确说明。
+
+（写到这刚想起之前[扩展 Python 控制台](https://zhuanlan.zhihu.com/p/56411693)用[sys.exc_info](https://docs.python.org/3.7/library/sys.html#sys.exc_info)取了[traceback](https://docs.python.org/3.7/library/traceback.html#traceback.print_exception)，其中的确有行号，但无列号）
+
+那时半夜里没头绪的时候，先试了这个单行程序`1/0`（因为当时只支持单行程序解析）。结果返回错误中，行号显示是 1：
+```
+Traceback (most recent call last):
+  File "./数.py", line 25, in <module>
+    exec(可执行码, 环境变量)
+  File "测试/除零.ul", line 1, in <module>   <<<<<========此处
+    1/0
+  File "/Users/xuanwu/work/木兰/prototype/环境.py", line 6, in __内置_除
+    return math.floor(a / b)
+ZeroDivisionError: division by zero
+```
+于是懵逼，不是 0 ？？那这个行号用在哪里？兜兜转转不死心，直接把代码里生成数节点时的行号写成随便一个数，比如 4：
+```python
+        return ast.Num(值, lineno = 4, col_offset = 列号)
+```
+果不然，报错时就报 line 4 ，代码也定位不了了：
+```
+Traceback (most recent call last):
+  File "./数.py", line 25, in <module>
+    exec(可执行码, 环境变量)
+  File "测试/除零.ul", line 4, in <module>
+  File "/Users/xuanwu/work/木兰/prototype/环境.py", line 6, in __内置_除
+    return math.floor(a / b)
+ZeroDivisionError: division by zero
+```
+这样，至少确定设置行号能体现在错误信息中。接下来，想找个最简单的方法实现多行程序。因为本来只想添加行号列号，想尽量少为此添加其他语法。灵机一动，想木兰能不能忽略一个表达式中的换行，于是试了这样：
+```
+print(
+4/2)
+```
+果然可以！但是，接下去就是个大坑，一路找到错误处理部分，还没找到出路，回头再说。
+
+退回来，决定添加多行支持，以便测试行号设置。比想的简单些（当然，参考逆向工程），下面是语法分析器相关部分（详见[此 commit](https://github.com/MulanRevive/prototype/commit/16f2f7fcd2b18b64b7fb214184f20c0690f599b3)）：
+```python
+    @分析器母机.production('模块 : 声明列表')
+    def 模块(片段):
+        return 语法树.模块(主体=片段[0], 忽略类型=[])
+
+    @分析器母机.production('声明列表 : 表达式声明')
+    @分析器母机.production('声明列表 : 声明列表 换行 表达式声明')
+    def 声明列表(片段):
+        if len(片段) == 1:
+            return [片段[0]]
+        片段[0].append(片段[(-1)])
+        return 片段[0]
+
+    @分析器母机.production('表达式声明 : 表达式')
+    def 表达式声明(片段):
+        return 语法树.表达式(值 = 片段[0], 行号=0, 列号=0)
+```
+现在就支持了这样的代码：
+```
+print(2)
+print(3)
+```
+输出`23`。下面这样的代码出错信息会是如何呢？
+```
+print(2)
+print(1/0)
+```
+因为第二行出的错，但因为节点的行号为 0，错误仍定位于行 1，估计是 python 默认值：
+```
+2Traceback (most recent call last):
+  File "./数.py", line 25, in <module>
+    exec(可执行码, 环境变量)
+  File "测试/多行除零.ul", line 1, in <module>   <<<<<========此处
+    print(2)
+  File "/Users/xuanwu/work/木兰/prototype/环境.py", line 6, in __内置_除
+    return math.floor(a / b)
+ZeroDivisionError: division by zero
+```
+继续看逆向，似乎取行号还算简单，摘取了能够满足这个例子的部分（列号仍不知道有啥用，先不管），在语法分析器中[实现如下](https://github.com/MulanRevive/prototype/commit/adbc78203bf381b8bc4c5cd1619bb0e0c6baf5e4)：
+```python
+    def 取源码位置(片段):
+        if isinstance(片段, Token):
+            return 片段.getsourcepos()
+
+    def 取行号(片段):
+        try:
+            return 语法分析器.取源码位置(片段).lineno
+        except:
+            return 0
+...
+    @分析器母机.production('数 : 整数')
+    def 数(片段):
+        数值 = int(片段[0].getstr(), 0)
+        return 语法树.数(数值, 行号=语法分析器.取行号(片段[0]), 列号=0)
+```
+运行多行除零代码，终于在错误信息中显示位置正确：
+```
+2Traceback (most recent call last):
+  File "./数.py", line 25, in <module>
+    exec(可执行码, 环境变量)
+  File "测试/多行除零.ul", line 2, in <module>
+    print(1/0)
+  File "/Users/xuanwu/work/木兰/prototype/环境.py", line 6, in __内置_除
+    return math.floor(a / b)
+ZeroDivisionError: division by zero
+```
+
+代码中已经有很多处创建节点时需要取行号，而且以后会更多，下面打算重构下减少将来的重复代码。与逆向中不同，至今没在语法分析器类中用 self。重构时顺便研究下 self，以及是否需要。
