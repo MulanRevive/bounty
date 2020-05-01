@@ -1,0 +1,76 @@
+
+接上文[重现木兰编程语言（四）——行号与多行支持](https://zhuanlan.zhihu.com/p/136142507)，在说行列号之前，（早）该把生成的 Python 语法树的基本结构说明一下，同时为了今后的调试写点辅助代码。
+
+比如简单代码：
+```
+print(2) 
+```
+原始木兰用--dump-ast选项运行，生成的语法树 dump 出来是这样一长溜（调用了[ast.dump](https://docs.python.org/3.7/library/ast.html#ast.dump)）：
+```
+Module(body=[Expr(value=Call(func=Name(id='print', ctx=Load(), lineno=1, col_offset=1), args=[Num(n=2, lineno=1, col_offset=7)], keywords=[], lineno=1, col_offset=1), lineno=1, col_offset=1)])
+```
+可以想象，如果稍微复杂一点的代码，如果要查看生成的语法树，以及肉眼比较两颗语法树的话，会有多么辣眼睛。
+
+于是，为了生成稍微肉眼友好的格式：
+```
+Module(
+  body=[Expr(
+      value=Call(
+        func=Name(
+          id=print
+          ctx=Load()
+          lineno=1
+          col_offset=1
+        )
+        args=[Num(
+            n=2
+            lineno=1
+            col_offset=7
+          )]
+        keywords=[]
+        lineno=1
+        col_offset=1
+      )
+      lineno=1
+      col_offset=1
+    )]
+)
+```
+粗写了个递归来遍历语法树并格式化输出：
+```python
+    def 格式化节点(节点, 层次):
+        缩进 = "  "
+        输出 = ""
+        if isinstance(节点, list):
+            输出 += "["
+            for 子节点 in 节点:
+                输出 += 语法树相关.格式化节点(子节点, 层次 + 1)
+            输出 += "]"
+        elif isinstance(节点, int):
+            输出 += str(节点)
+        elif isinstance(节点, str):
+            输出 += 节点
+        else:
+            输出 += type(节点).__name__ + "("
+            属性个数 = 0
+            for 属性 in ast.iter_fields(节点):
+                属性个数 += 1
+                输出 += "\n" + 缩进 * 层次 + 属性[0] + "="
+                输出 += 语法树相关.格式化节点(属性[1], 层次 + 1)
+            if isinstance(节点, ast.stmt) or isinstance(节点, ast.expr):
+                输出 += "\n" + 缩进 * 层次 + "lineno=" + str(节点.lineno)
+                输出 += "\n" + 缩进 * 层次 + "col_offset=" + str(节点.col_offset)
+            if 属性个数 == 0:
+                return 输出 + ")"
+            return 输出 + "\n" + 缩进 * (层次 - 1) + ")"
+        return 输出
+```
+上面代码结合输出，可以更加直观地了解 Python 语法树的结构。
+
+如果是单个节点，比如根节点——模块（Module），就由else的部分输出它的类型，并遍历它的所有属性；节点的属性值可以是节点，或者节点列表，比如模块节点的body属性的值可以是多个表达式（Expr） 。如果是声明（stmt）或者表达式，有行列号两个属性。所有可能节点参考 [Python 官方语法描述](https://docs.python.org/3.7/library/ast.html#abstract-grammar)。
+
+这样格式化输出之后，将木兰生成的语法树与我的原型生成的进行肉眼对比就稍微方便点，题图是 vsc diff 的效果（右边是木兰的）：
+
+![](截图/2020-04-30_ast对比.png)
+
+可见行列号已经填上了（且听下回分解），但细节仍有些不同。继续调试。。
