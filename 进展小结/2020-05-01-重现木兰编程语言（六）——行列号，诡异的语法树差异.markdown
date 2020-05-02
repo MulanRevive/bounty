@@ -1,0 +1,55 @@
+书接[上文](https://zhuanlan.zhihu.com/p/137651939)，在不幸发现生成的语法树和木兰有着微妙差别之前，已经完成了语法树节点中行列号的设置。
+
+为啥要有行号呢？可以在报错时定位，详见[前文](https://zhuanlan.zhihu.com/p/136142507)。列号呢？还是不知道，但也做了，与木兰一致。
+
+方式简单：RPly 在词法分析之后，每个词（Token）都自带了行列号信息，生成的语法树节点就可以照此填充：
+```python
+    def 取源码位置(片段):
+        if isinstance(片段, list):
+            if len(片段) > 0:
+                片段 = 片段[0]
+        if isinstance(片段, Token):
+            return 片段.getsourcepos()
+        if isinstance(片段, ast.stmt) or isinstance(片段, ast.expr):
+            return SourcePosition(0, 片段.lineno, 片段.col_offset)
+        return SourcePosition(0, 0, 0)
+```
+比如`print(2)`中的 2，解析时靠的是这条规则：
+```python
+    @分析器母机.production('数 : 整数')
+    def 数(片段):
+        数值 = int(片段[0].getstr(), 0)
+        return 语法树.数(数值, 片段)
+```
+
+其中的`片段`是对应的词列表，就是【2 对应的 Token】。`isinstance(片段, list)`分支取第一项，也就是 2 对应的 Token，再由`getsourcepos`取行列号信息。
+
+再复杂些的像`1+2`会生成一个二元运算（BinOp）节点，它的行列号就和这个表达式中的第一个节点（1）的相同，而 1 对应的数（Num）节点因为在之前就已生成，已经具备了行列号。
+
+除了底层的 Token，貌似其他的节点应该要么是声明（stmt）要么是表达式（expr）。整棵树的行列号信息就这样从最底层的叶子一层层填充起来。
+
+昨天改进语法树格式化输出之前，上面这些已经完成了。“终极”考验就是和木兰生成的语法树作比较，目标是完全一致。
+
+不出所料地出了问题，同样一个 2，为啥我的节点是 ast.Constant 而木兰的是 ast.Num 呢？
+
+完全摸不着头脑，尤其是我代码中就没有显式生成过 Constant 节点。
+
+百无聊赖，试了试看 Num 是否和 Constant 有子类关系（从官方文档看不应该，它们俩都是 expr，平级），用下面的测试：
+```python
+self.assertTrue(isinstance(ast.Num(1, lineno=0, col_offset=0), ast.Constant))
+```
+结果是真！反过来呢？还是真！这俩货难道是等价的么？？
+
+突然想到，早先注意到在用于原型开发和测试的 vsc 的终端下，默认的Python3 环境是 3.8.1，而用于跑木兰系统终端的是 3.7.4（用 3.8 跑有些情况会报错）。
+
+换成系统终端再跑测试，果然，就这么简单搞定了，与木兰生成的完全一致。
+
+再看看[官方 3.8 版文档](https://docs.python.org/3.8/library/ast.html#node-classes)：
+
+> Changed in version 3.8: Class ast.Constant is now used for all constants.
+
+> Deprecated since version 3.8: Old classes ast.Num, ast.Str, ast.Bytes, ast.NameConstant and ast.Ellipsis are still available, but they will be removed in future Python releases. In the meanwhile, instantiating them will return an instance of a different class.
+
+3.8 里把 Constant 和 Num 俩货互为子类了也是服。试了下 Constant 就不是 Str。。考虑把 3.8 直接删掉，省得以后麻烦。。
+
+把语法树相关测试也[补上了](https://github.com/MulanRevive/prototype/blob/master/test%E8%AF%AD%E6%B3%95%E6%A0%91.py)，接下去继续更实质的语法部分漫漫长路~
