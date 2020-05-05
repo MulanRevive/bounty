@@ -1,0 +1,53 @@
+*此刻支持的语法*
+```
+a=2
+b=a*a
+print(a+b)
+```
+项目地址仍[在此](https://github.com/MulanRevive/prototype/tree/8dc222a8d861337520afc4846fffc9625c6b040a)。
+
+接续[上文](https://zhuanlan.zhihu.com/p/137785657)，添加赋值的支持。
+
+相关语法修改如下：
+```
+声明列表 : 声明
+        | 声明列表 换行 声明
+
+声明 : 表达式声明
+      | 赋值
+
+表达式声明 : 表达式
+
+赋值 : 表达式前缀 = 表达式
+
+表达式 : 二元表达式
+      | 表达式前缀
+      | 数
+
+表达式前缀 : 名称
+            | 调用
+```
+
+其他没啥好说，这里一段：
+```python
+    @分析器母机.production('赋值 : 表达式前缀 = 表达式')
+    def 赋值(片段):
+        #print("赋值")
+        片段[0].ctx = ast.Store()
+        return 语法树.赋值(
+            变量 = 片段[0],
+            值 = 片段[2],
+            片段 = 片段)
+```
+如果没设置`ctx`为`ast.Store()`，则运行时报错：
+```
+ValueError: expression must have Store context but has Load instead
+```
+
+[官方语法文档](https://docs.python.org/3.7/library/ast.html#abstract-grammar)中，表达式上下文有这几种：
+```
+expr_context = Load | Store | Del | AugLoad | AugStore | Param
+```
+看来，表达式如果是被写入，上下文就是`Store`；如果是被读取，上下文就是`Load`。
+
+接下来，条件语句吧？

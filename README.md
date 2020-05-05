@@ -73,3 +73,10 @@
 - 16 日，延伸调研 [RPly 和 PyPy](https://zhuanlan.zhihu.com/p/131780649)，作了简单[性能对比试验](https://zhuanlan.zhihu.com/p/132503029)
 - 19 日，原型搭建——[调用 print](https://zhuanlan.zhihu.com/p/133449850)
 - 21 日，原型搭建——[整数的減、乘、除](https://zhuanlan.zhihu.com/p/134029658)，其中除较特别
+- 24 日，原型搭建——[行号，多行支持](https://zhuanlan.zhihu.com/p/136142507)
+
+#### 5 月
+
+- 1 日，为方便调试[改进语法树格式化输出](https://zhuanlan.zhihu.com/p/137651939)
+- 2 日，原型搭建——[行列号，语法树比照](https://zhuanlan.zhihu.com/p/137785657)
+- 四日，原型搭建——[赋值语句](https://zhuanlan.zhihu.com/p/138253566)
