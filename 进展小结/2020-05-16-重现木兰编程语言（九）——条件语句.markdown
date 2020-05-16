@@ -1,0 +1,102 @@
+*此刻支持的语法*
+```
+if 0 {
+print(1)
+} elif 0 {
+print(2)
+} else {
+print(3)
+}
+
+print(6) if 1
+```
+
+项目地址仍[在此](https://github.com/MulanRevive/prototype)。
+
+接续[上文](https://zhuanlan.zhihu.com/p/140430769)，添加条件语句。暂未实现布尔值与比较语法，于是暂用数字代替。0 为假，非 0 为真，这与 Python 相同。
+
+## 词法分析
+
+吃过上次的亏，于是小心地在词法规则的适当位置加了如下规则（细节如为何 if 前后有 \b 但没有 \s* 等等还需回头研究），另外仍然不知`flags=(re.DOTALL)`有何用：
+```python
+分词器母机.add('如果', '\\bif\\b')
+分词器母机.add('否则如果', '\\r*\\n*\\s*elif\\s*\\r*\\n*')
+分词器母机.add('否则', '\\r*\\n*\\s*else\\s*\\r*\\n*')
+```
+最简单的测试：
+```
+if 1{print(3)}
+```
+
+结果没过，只识别出了第一个`if`：
+```
+$ python 中.py 测试/条件.ul
+Token('如果', 'if')
+Traceback (most recent call last):
+  File "中.py", line 18, in <module>
+    查看(各词)
+  File "中.py", line 10, in 查看
+    for 词 in 各词:
+  File "/opt/miniconda3/envs/prototype/lib/python3.7/site-packages/rply/lexer.py", line 60, in __next__
+    return self.next()
+  File "/opt/miniconda3/envs/prototype/lib/python3.7/site-packages/rply/lexer.py", line 57, in next
+    raise LexingError(None, SourcePosition(self.idx, -1, -1))
+rply.errors.LexingError: (None, SourcePosition(idx=2, lineno=-1, colno=-1))
+```
+
+貌似是空格问题，试出来是缺了这句导致的：
+```python
+分词器母机.ignore('[ \t\r]+')
+```
+如果仅处理空格，就是这样也可以:
+```python
+分词器母机.ignore('[ ]+')
+```
+
+发现之前的测试用例中还没有出现过空格（非换行），于是加了这个测试：
+```
+print(2 )
+```
+
+果然同样报错：
+> rply.errors.LexingError: (None, SourcePosition(idx=7, lineno=-1, colno=-1))
+
+idx 就是出错的位置，也就是第一个空格所在位置。加了上面的 ignore 规则，所有空格就都被忽略（还是作为分隔符？）
+
+
+## 语法分析
+
+语法添加规则如下（ parser 实现中貌似与规则顺序无关）：
+```
+声明 : 条件声明
+
+条件声明 : 如果 表达式 块 否则如果声明
+        | 如果 表达式 块 否则 块
+        | 声明 如果 表达式
+
+否则如果声明 : 
+        | 否则如果 表达式 块 否则如果声明
+        | 否则如果 表达式 块 否则 块
+```
+
+实现上，转换为 Python 的 if 语句：
+```python
+    @分析器母机.production('条件声明 : 如果 表达式 块 否则如果声明')
+    @分析器母机.production('条件声明 : 如果 表达式 块 否则 块')
+    @分析器母机.production('否则如果声明 : ')
+    @分析器母机.production('否则如果声明 : 否则如果 表达式 块 否则如果声明')
+    @分析器母机.production('否则如果声明 : 否则如果 表达式 块 否则 块')
+    def 条件声明(片段):
+        if len(片段) == 0:
+            return []
+        否则部分 = 片段[-1]
+        return 语法树.如果(
+            条件=片段[1],
+            主体=片段[2],
+            否则=否则部分 if isinstance(否则部分, list) else [否则部分],
+            片段=片段)
+```
+
+这里的`否则=否则部分 if isinstance(否则部分, list) else [否则部分],`至今还没全想清楚，因为牵涉到嵌套。真是自己写的话，肯定要费大劲。
+
+走马观花，先过。

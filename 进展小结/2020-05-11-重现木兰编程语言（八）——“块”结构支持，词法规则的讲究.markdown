@@ -1,0 +1,124 @@
+*此刻支持的语法*
+```
+{
+print(3)
+}
+```
+
+项目地址仍[在此](https://github.com/MulanRevive/prototype)。
+
+接续[上文](https://zhuanlan.zhihu.com/p/138253566)，添加“块”结构的支持。
+
+首先在之前所有词法规则 ***之后*** 添加了如下[两条词法规则](https://github.com/MulanRevive/prototype/commit/af3a239f1f7c37664928a88c5bd95fce18e75278)：
+```python
+分词器母机.add('前括号', '{\\r*\\n*')
+分词器母机.add('后括号', '\\r*\\n*}')
+```
+相关语法修改如下：
+```
+声明 : 表达式声明
+      | 赋值
+      | 块
+
+块 : 前括号 声明列表 后括号
+```
+
+块结构的语法树转换比较有趣。
+```python
+    @分析器母机.production('声明 : 块')
+    def 单块(片段):
+        return 语法树.如果(
+            条件=语法树.常数(True, 片段),
+            主体=片段[0],
+            否则=[],
+            片段=片段)
+```
+
+Python 的[语法描述](https://docs.python.org/3.7/library/ast.html#abstract-grammar)中并无`block`一说。
+
+看样子就是将`{print(2)}`等价为了这样的 Python 代码：
+```python
+if True:
+  print(2)
+```
+
+与下面 python 生成的语法树比对，的确如此。
+```
+>>> ast.dump(ast.parse("if True:\n\tprint(2)"), True, True)
+"Module(body=[If(test=NameConstant(value=True, lineno=1, col_offset=3), body=[Expr(value=Call(func=Name(id='print', ctx=Load(), lineno=2, col_offset=1), args=[Num(n=2, lineno=2, col_offset=7)], keywords=[], lineno=2, col_offset=1), lineno=2, col_offset=1)], orelse=[], lineno=1, col_offset=0)])"
+```
+
+什么是NameConstant？[这里](https://greentreesnakes.readthedocs.io/en/latest/nodes.html?highlight=NameConstant#NameConstant)说：
+
+> True, False or None. value holds one of those constants.
+
+看起来就是用于`真/假/空`三个值。Python 3.8 后就被`Constant`替代了。
+
+接下来困惑于前后括号正则表达式中的`\\r*\\n*`部分许久。乍一看是为了支持括号前后带换行。
+
+如果仅前括号之后有换行：
+```
+{
+print(3)}
+```
+词法分析结果为：
+```
+Token('前括号', '{\n')
+Token('标识符', 'print')
+Token('(', '(')
+Token('整数', '3')
+Token(')', ')')
+Token('后括号', '}')
+```
+语法分析无误，运行输出 3.
+
+但是，如果源码的后括号之前有换行：
+```
+{
+print(3)
+}
+```
+
+则词法分析出了个”换行“：
+```
+Token('前括号', '{\n')
+Token('标识符', 'print')
+Token('(', '(')
+Token('整数', '3')
+Token(')', ')')
+Token('换行', '\n')
+Token('后括号', '}')
+```
+
+对比原始木兰的词法解析结果：
+
+```
+Token('LBRACE', '{\n')
+Token('IDENTIFIER', 'print')
+Token('(', '(')
+Token('INTEGER_LITERAL', '3')
+Token(')', ')')
+Token('RBRACE', '\n}')
+```
+为何 \n 能被合在后括号中呢？
+
+对照逆向工程各种尝试，最后发现是这条词法规则放置位置的问题：
+```
+分词器母机.add('换行', '\n')
+```
+
+这条规则在逆向中，置于所有 add 的规则最后，在 ignore 规则之前。同样处理之后，词法分析和运行结果即如预期。
+
+看来，词法规则添加的先后决定了词法分析的优先级。只在所有前面的规则无法匹配时，才尝试后面的规则。
+
+就这么点进展，可还是留下了一个隐隐的坑。在这个词法规则中：
+
+```
+分词器母机.add('前括号', '{\\r*\\n*')
+```
+
+逆向中最后还有个参数`flags=(re.DOTALL)`
+
+根据 [rply 源码](https://github.com/alex/rply/blob/6e16262dc6d434fc467eed83ed31ca764ba01a34/rply/lexergenerator.py#L22)，这个参数在正则匹配时使用，但不解的是，python 文档中的[re.DOTALL](https://docs.python.org/3.7/library/re.html#re.DOTALL)似乎只对正则中的`.`有效，而前后括号的正则描述中并无`.`，那么这个参数是做什么用的呢？
+
+暂且绕过继续。
