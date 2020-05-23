@@ -1,0 +1,7 @@
+func increment(step) {
+  func add(n) {
+    return n + step
+  }
+  return add
+}
+print(increment(10)(1))

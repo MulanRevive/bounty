@@ -25,7 +25,7 @@ import subprocess
     "stmt_for_in.mulan": b'3',
     "stmt_for_colon.mulan": b'5',
     "using_mulan_module.mulan": b'ho',
-    "using_python_module.mulan": b'hi\r\n',
+    "using_python_module.mulan": b'hi\r\n',# TODO: 如果是 mac 下测试, 并无\r: b'hi\n'
     "if.mulan": b'1',
     "if_else.mulan": b'2',
     "if_elif.mulan": b'1',
@@ -33,7 +33,9 @@ import subprocess
     "stmt_if_true.mulan": b'4',
     "stmt_if_false.mulan": b'',
     "while.mulan": b'10',
-    "loop.mulan": b'6'
+    "loop.mulan": b'6',
+    "函数高阶.ul": b'11',
+    #"nested_func.mulan": b'5', # TODO: 为何 b'5nil'?
 }
 
 # 多进程参考：https://shuzhanfan.github.io/2017/12/parallel-processing-python-subprocess/
@@ -42,7 +44,7 @@ import subprocess
 # 参考：https://stackoverflow.com/questions/748028/how-to-get-output-of-exe-in-python-script
 for 文件 in 期望值:
     print("开始测试：" + 文件)
-    进程表[文件] = subprocess.Popen(["..\\原始资料\\可执行文件\\ulang-0.2.2.exe", 路径 + 文件], stdout=subprocess.PIPE) #__main__
+    进程表[文件] = subprocess.Popen(["ulang", 路径 + 文件], stdout=subprocess.PIPE) #__main__
 
 失败表 = {}
 
