@@ -1,0 +1,17 @@
+func 累积(上限) {
+  数 = 1
+  和 = 0
+  while 1==1 and 2==2 or 3==3 {
+    if 数 <= 上限 {
+      和 = 和 + 数
+      数 = 数 + 1
+      continue
+    } elif 1!=2 {
+      break
+    } else {
+      break
+    }
+  }
+  return 和
+}
+print(累积(4))
