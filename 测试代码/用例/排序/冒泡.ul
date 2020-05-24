@@ -3,7 +3,7 @@ func 冒泡(数列) {
   换过 = true
   while 换过 {
     换过 = false
-    for i in range(len(数列) - 1) {
+    for i in 0..len(数列) - 2 {
       前项 = 数列[i]
       后项 = 数列[i + 1]
       if 前项 > 后项 {
