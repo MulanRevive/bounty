@@ -36,6 +36,7 @@ import subprocess
     "loop.mulan": b'6',
     "函数高阶.ul": b'11',
     "中文标识符.ul": b'2020',
+    "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
     #"nested_func.mulan": b'5', # TODO: 为何 b'5nil'?
 }
 
