@@ -1,10 +1,13 @@
+/* 参考: https://stackabuse.com/sorting-algorithms-in-python/ */
 func 冒泡(数列) {
   换过 = true
   while 换过 {
     换过 = false
     for i in range(len(数列) - 1) {
-      if 数列[i] > 数列[i + 1] {
-        数列[i], 数列[i + 1] = 数列[i + 1], 数列[i]
+      前项 = 数列[i]
+      后项 = 数列[i + 1]
+      if 前项 > 后项 {
+        数列[i], 数列[i + 1] = 后项, 前项
         换过 = true
       }
     }

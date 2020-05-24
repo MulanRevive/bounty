@@ -1,4 +1,5 @@
 import subprocess
+from sys import platform
 
 路径 = '用例/'
 
@@ -25,7 +26,7 @@ import subprocess
     "stmt_for_in.mulan": b'3',
     "stmt_for_colon.mulan": b'5',
     "using_mulan_module.mulan": b'ho',
-    "using_python_module.mulan": b'hi\r\n',# TODO: 如果是 mac 下测试, 并无\r: b'hi\n'
+    "using_python_module.mulan": b'hi\r\n' if platform == "win32" else b'hi\n',
     "if.mulan": b'1',
     "if_else.mulan": b'2',
     "if_elif.mulan": b'1',
