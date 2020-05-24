@@ -82,3 +82,5 @@
 - 四日，原型搭建——[赋值语句](https://zhuanlan.zhihu.com/p/138253566)
 - 11 日，原型搭建——[“块”结构（{}）支持](https://zhuanlan.zhihu.com/p/140430769)
 - 16 日，原型搭建——[条件语句（if...elif...else)](https://zhuanlan.zhihu.com/p/141426111)
+- 19 日，原型搭建——[大小比较、while循环，不允许无效果表达式](https://zhuanlan.zhihu.com/p/141426111)
+- 23 日 [木兰编程语言体验版更新，附带 VS Code 支持插件](https://zhuanlan.zhihu.com/p/143038381)，通过更多测试。短期内，将基于体验版编写一些例程，过程中改进周边设施，包括对反馈信息进行中文化。此过程中原型项目将以技术验证（包括体验版中的 bug 重现和修复）为主要目的。
