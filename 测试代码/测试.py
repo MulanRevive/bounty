@@ -26,6 +26,7 @@ from sys import platform
     "stmt_for_in.mulan": b'3',
     "stmt_for_colon.mulan": b'5',
     "using_mulan_module.mulan": b'ho',
+    # 参考: https://stackoverflow.com/questions/8220108/how-do-i-check-the-operating-system-in-python
     "using_python_module.mulan": b'hi\r\n' if platform == "win32" else b'hi\n',
     "if.mulan": b'1',
     "if_else.mulan": b'2',
@@ -38,6 +39,7 @@ from sys import platform
     "函数高阶.ul": b'11',
     "中文标识符.ul": b'2020',
     "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
+    "排序/插入.ul": b'[1, 2, 4, 5, 8]',
     #"nested_func.mulan": b'5', # TODO: 为何 b'5nil'?
 }
 
