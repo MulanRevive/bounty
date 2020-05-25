@@ -40,6 +40,7 @@ from sys import platform
     "中文标识符.ul": b'2020',
     "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
     "排序/插入.ul": b'[1, 2, 4, 5, 8]',
+    "排序/快速.ul": b'[1, 2, 4, 5, 8]',
     #"nested_func.mulan": b'5', # TODO: 为何 b'5nil'?
 }
 
