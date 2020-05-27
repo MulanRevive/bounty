@@ -50,7 +50,7 @@ from sys import platform
 # 参考：https://stackoverflow.com/questions/748028/how-to-get-output-of-exe-in-python-script
 for 文件 in 期望值:
     print("开始测试：" + 文件)
-    进程表[文件] = subprocess.Popen(["ulang", 路径 + 文件], stdout=subprocess.PIPE) #__main__
+    进程表[文件] = subprocess.Popen(["木兰", 路径 + 文件], stdout=subprocess.PIPE) #__main__
 
 失败表 = {}
 
