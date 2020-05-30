@@ -1,0 +1,2 @@
+assert(2>1, 'pass')
+assert(2<1, 'fail')
