@@ -11,18 +11,12 @@ type 猜数字 : Cmd {
 
     func $default(行) {
         数 = int(行)
-        if 数 > self.想的 {
-            println("太大了!")
-        } elif 数 < self.想的 {
-            println("太小了!")
-        } else {
+        if 数 == self.想的 {
             println("中了!")
-            self.do_quit(行)
+            exit()
+        } else {
+            println("太" + (数 > self.想的 ? "大" : "小") + "了!")
         }
-    }
-
-    func $do_quit(arg) {
-        exit()
     }
 }
 
