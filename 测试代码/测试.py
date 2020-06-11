@@ -5,19 +5,12 @@ from sys import platform
 
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
-    "加.ul": b'5',
-    "减.ul": b"1",
-    "乘.ul": b"6",
-    "除整.ul": b"2",
-    "除留整.ul": b"10",
     "加小数.ul": b"5.0",
     "除小数.ul": b"2.0",
     "func_params_return.mulan": b'Mulan1',
-    "ternary.mulan": b'23',
     "lambda.mulan": b'[0, 1, 4, 9]',
     "type.mulan": b'Mulan',
     "func_no_params.mulan": b'123',
-    "func_params.mulan": b'1',
     "break.mulan": b'012',
     "continue.mulan": b'01245',
     "range.mulan": b'012123-113',
@@ -28,7 +21,6 @@ from sys import platform
     "using_mulan_module.mulan": b'ho',
     # 参考: https://stackoverflow.com/questions/8220108/how-do-i-check-the-operating-system-in-python
     "using_python_module.mulan": b'hi\r\n' if platform == "win32" else b'hi\n',
-    "if.mulan": b'1',
     "if_else.mulan": b'2',
     "if_elif.mulan": b'1',
     "if_elif_else.mulan": b'3',
@@ -36,8 +28,6 @@ from sys import platform
     "stmt_if_false.mulan": b'',
     "while.mulan": b'10',
     "loop.mulan": b'6',
-    "函数高阶.ul": b'11',
-    "中文标识符.ul": b'2020',
     "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
     "排序/插入.ul": b'[1, 2, 4, 5, 8]',
     "排序/快速.ul": b'[1, 2, 4, 5, 8]',

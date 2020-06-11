@@ -1,3 +1,0 @@
-print(true ? 2 : 3)
-
-print(false ? 2 : 3)
