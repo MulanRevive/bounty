@@ -1,7 +1,0 @@
-if false {
-    ;
-} elif false {
-    ;
-} else {
-    print(3)
-}

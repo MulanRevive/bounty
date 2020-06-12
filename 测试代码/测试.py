@@ -11,8 +11,6 @@ from sys import platform
     "lambda.mulan": b'[0, 1, 4, 9]',
     "type.mulan": b'Mulan',
     "func_no_params.mulan": b'123',
-    "break.mulan": b'012',
-    "continue.mulan": b'01245',
     "range.mulan": b'012123-113',
     "for_colon.mulan": b'6',
     "for_in.mulan": b'10',
@@ -21,9 +19,6 @@ from sys import platform
     "using_mulan_module.mulan": b'ho',
     # 参考: https://stackoverflow.com/questions/8220108/how-do-i-check-the-operating-system-in-python
     "using_python_module.mulan": b'hi\r\n' if platform == "win32" else b'hi\n',
-    "if_else.mulan": b'2',
-    "if_elif.mulan": b'1',
-    "if_elif_else.mulan": b'3',
     "stmt_if_true.mulan": b'4',
     "stmt_if_false.mulan": b'',
     "while.mulan": b'10',
@@ -31,7 +26,7 @@ from sys import platform
     "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
     "排序/插入.ul": b'[1, 2, 4, 5, 8]',
     "排序/快速.ul": b'[1, 2, 4, 5, 8]',
-    #"nested_func.mulan": b'5', # TODO: 为何 b'5nil'?
+    #"nested_func.mulan": b'5', # TODO: 因为 count 无返回, 因此输出 b'5nil'
 }
 
 # 多进程参考：https://shuzhanfan.github.io/2017/12/parallel-processing-python-subprocess/

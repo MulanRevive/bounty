@@ -1,5 +1,0 @@
-if false {
-    ;
-} elif true {
-    print(1)
-}

@@ -1,5 +1,0 @@
-if false {
-    ;
-} else {
-    print(2)
-}
