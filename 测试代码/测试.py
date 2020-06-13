@@ -9,7 +9,6 @@ from sys import platform
     "除小数.ul": b"2.0",
     "func_params_return.mulan": b'Mulan1',
     "lambda.mulan": b'[0, 1, 4, 9]',
-    "type.mulan": b'Mulan',
     "func_no_params.mulan": b'123',
     "range.mulan": b'012123-113',
     "for_colon.mulan": b'6',
@@ -19,8 +18,6 @@ from sys import platform
     "using_mulan_module.mulan": b'ho',
     # 参考: https://stackoverflow.com/questions/8220108/how-do-i-check-the-operating-system-in-python
     "using_python_module.mulan": b'hi\r\n' if platform == "win32" else b'hi\n',
-    "stmt_if_true.mulan": b'4',
-    "stmt_if_false.mulan": b'',
     "while.mulan": b'10',
     "loop.mulan": b'6',
     "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
