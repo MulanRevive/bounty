@@ -1,0 +1,129 @@
+自原型搭建已过去两个多月，现在实现了木兰编程语言一些基本的功能。正值刚搬家到 [OSChina](https://www.oschina.net/p/mulan-rework)，作一阶段小结。
+
+## 功能
+
+以下示例都选自[测试用例](https://gitee.com/MulanRevive/mulan-rework/tree/master/%E6%B5%8B%E8%AF%95)。
+
+调用现有 Python 库如[草蟒](https://www.oschina.net/p/grasspy)：
+```javascript
+using * in 海龟
+颜色("黄色", "红色")
+开始填充()
+for 拐数 in 0..4 {
+  前进(200)
+  右转(144)
+}
+结束填充()
+主循环()
+```
+
+类型：
+```javascript
+type Animal {
+    func getName() {
+        return 1
+    }
+}
+type Person : Animal {
+{}
+}
+print(Person.getName())
+```
+
+函数：
+```javascript
+func increment(step) {
+    func add(n) {
+        return n + step
+    }
+    return add
+}
+print(increment(10)(1))
+```
+
+流程控制：
+```javascript
+print(false ? 2 : 1)
+
+sum = 0
+number = 1
+while number < 4 {
+  sum = sum + number
+  number = number + 1
+}
+print(sum)
+```
+
+## 中文报错信息
+
+上述基本功能之外，对部分报错信息进行了加工，使之更易懂好读。
+
+比如下面的死递归：
+```javascript
+func f() {
+  f()
+}
+f()
+```
+
+运行报错信息如下：
+```
+(..•˘_˘•..) 递归过深。请确认: 1、的确需要递归 2、递归的收敛正确
+见第2行：f()
+调用层级如下
+第2行：f()
+【中略 995 行】
+第2行：f()
+第4行：f()
+```
+
+又如此段代码：
+```javascript
+func add(number) {
+    return number1+1
+}
+func output(number) {
+    print(number)
+}
+output(add(2))
+```
+
+运行报错如下：
+```
+(..•˘_˘•..) 请先定义'number1'再使用
+见第2行：return number1+1
+调用层级如下
+第7行：output(add(2))
+```
+
+语法分析的错误信息亦然。比如现在尚不支持空行，于是下面的代码:
+```
+
+print(2)
+```
+会报错如下：
+```
+错误.语法错误: 文件 "测试/错误处理/空行.ul", 第1行, 第1列, 没认出这个词 "换行"
+
+^
+```
+
+## 代码统计
+
+由于实现机制是将源码转换为 Python 的抽象语法树（AST）后调用 exec 执行，因此主要代码量在词法分析器和语法分析器（包括 AST 转换）。下面是几个主要部分的代码量统计（使用 scc，包括空行和注释，木兰的`.ul`代码统计使用`--count-as ul:javascript`参数）
+
+- 测试
+  - 木兰测试用例：465
+  - `测试.py`，运行测试的脚本：123
+  - `test语法树.py`，确保生成的语法树与原始版本一致：52
+- 实现：1287
+  - （语法）`分析器.py`，包括 AST 转换：569
+  - `语法树.py`，`功用/语法树处理.py`，包括对 ast 库的中文封装：214
+  - `词法分析器.py`，主要是词法规则：110
+  - `中.py`，主程序：56
+  - `功用/反馈信息.py`，报错信息中文化：43
+  - `环境.py`，全局变量：30
+
+## 下一步
+
+除了继续补全木兰语言本身功能之外，将尝试开发一个简单的代码编辑器，使新用户可以挑选各测试用例进行修改后直接运行。
