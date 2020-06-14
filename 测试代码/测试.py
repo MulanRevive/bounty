@@ -12,12 +12,9 @@ from sys import platform
     "func_no_params.mulan": b'123',
     "range.mulan": b'012123-113',
     "for_colon.mulan": b'6',
-    "for_in.mulan": b'10',
     "stmt_for_in.mulan": b'3',
     "stmt_for_colon.mulan": b'5',
     "using_mulan_module.mulan": b'ho',
-    # 参考: https://stackoverflow.com/questions/8220108/how-do-i-check-the-operating-system-in-python
-    "using_python_module.mulan": b'hi\r\n' if platform == "win32" else b'hi\n',
     "while.mulan": b'10',
     "loop.mulan": b'6',
     "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
