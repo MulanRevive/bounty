@@ -15,8 +15,6 @@ from sys import platform
     "stmt_for_in.mulan": b'3',
     "stmt_for_colon.mulan": b'5',
     "using_mulan_module.mulan": b'ho',
-    "while.mulan": b'10',
-    "loop.mulan": b'6',
     "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
     "排序/插入.ul": b'[1, 2, 4, 5, 8]',
     "排序/快速.ul": b'[1, 2, 4, 5, 8]',
