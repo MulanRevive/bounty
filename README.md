@@ -109,3 +109,4 @@
 #### 6 月
 
 - 3 日, 原型项目: 开始类型定义部分.
+- 13 日，原型项目搬家到[OSChina](https://www.oschina.net/p/mulan-rework)，并发布[阶段小结](https://zhuanlan.zhihu.com/p/148065426)。下面除了继续完善语言功能，打算向编辑器方向摸索。
