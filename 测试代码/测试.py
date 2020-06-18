@@ -12,13 +12,8 @@ from sys import platform
     "func_no_params.mulan": b'123',
     "range.mulan": b'012123-113',
     "for_colon.mulan": b'6',
-    "stmt_for_in.mulan": b'3',
-    "stmt_for_colon.mulan": b'5',
     "using_mulan_module.mulan": b'ho',
-    "排序/冒泡.ul": b'[1, 2, 4, 5, 8]',
-    "排序/插入.ul": b'[1, 2, 4, 5, 8]',
     "排序/快速.ul": b'[1, 2, 4, 5, 8]',
-    #"nested_func.mulan": b'5', # TODO: 因为 count 无返回, 因此输出 b'5nil'
 }
 
 # 多进程参考：https://shuzhanfan.github.io/2017/12/parallel-processing-python-subprocess/

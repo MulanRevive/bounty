@@ -1,3 +1,0 @@
-sum = 0
-sum += n for n : [1, 4]
-print(sum)
