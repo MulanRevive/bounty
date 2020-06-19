@@ -1,5 +1,0 @@
-sum = 0
-for n : [1, 2, 3] {
-    sum += n
-}
-print(sum)

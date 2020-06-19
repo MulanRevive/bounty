@@ -11,7 +11,6 @@ from sys import platform
     "lambda.mulan": b'[0, 1, 4, 9]',
     "func_no_params.mulan": b'123',
     "range.mulan": b'012123-113',
-    "for_colon.mulan": b'6',
     "using_mulan_module.mulan": b'ho',
     "排序/快速.ul": b'[1, 2, 4, 5, 8]',
 }
