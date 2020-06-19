@@ -5,14 +5,11 @@ from sys import platform
 
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
-    "加小数.ul": b"5.0",
-    "除小数.ul": b"2.0",
     "func_params_return.mulan": b'Mulan1',
     "lambda.mulan": b'[0, 1, 4, 9]',
     "func_no_params.mulan": b'123',
     "range.mulan": b'012123-113',
     "using_mulan_module.mulan": b'ho',
-    "排序/快速.ul": b'[1, 2, 4, 5, 8]',
 }
 
 # 多进程参考：https://shuzhanfan.github.io/2017/12/parallel-processing-python-subprocess/
