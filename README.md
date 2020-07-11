@@ -110,3 +110,10 @@
 
 - 3 日, 原型项目: 开始类型定义部分.
 - 13 日，原型项目搬家到[OSChina](https://www.oschina.net/p/mulan-rework)，并发布[阶段小结](https://zhuanlan.zhihu.com/p/148065426)。下面除了继续完善语言功能，打算向编辑器方向摸索。
+- 19 日，原型进展：[支持列表操作，演示编辑器高亮](https://www.oschina.net/news/116577/grasspy-updated)
+- 26 日，[儿歌查询实例，引用模块、字符串列表操作](https://www.oschina.net/news/116734/grasspy-updated)
+
+#### 7 月
+
+- 6 日，[范围语法“下限..上限 by 间隔”，重构](https://www.oschina.net/news/116967/grasspy-updated)
+- 10 日，[无参数函数、字典基本功能，语法设计的取舍有感](https://www.oschina.net/news/117081/grasspy-updated)
