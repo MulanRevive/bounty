@@ -1,5 +1,0 @@
-print(list(map(n -> n^2, 0..3)))
-print(list(map(n -> {
-  a = n * 2
-  return a^2
-}, 0..3)))

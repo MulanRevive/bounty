@@ -6,7 +6,6 @@ from sys import platform
 # 不确定为何输出是bytes：https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 期望值 = {
     "func_params_return.mulan": b'Mulan1',
-    "lambda.mulan": b'[0, 1, 4, 9][0, 4, 16, 36]',
 }
 
 # 多进程参考：https://shuzhanfan.github.io/2017/12/parallel-processing-python-subprocess/
