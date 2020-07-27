@@ -1,7 +1,7 @@
 
 ### 运行测试
 
-在当前目录下运行: `> python 测试.py`，所有测试应都通过。
+可自动运行的用例已合并到[木兰重现项目库](https://gitee.com/MulanRevive/mulan-rework)。
 
 #### 其他
 
