@@ -117,3 +117,8 @@
 
 - 6 日，[范围语法“下限..上限 by 间隔”，重构](https://www.oschina.net/news/116967/grasspy-updated)
 - 10 日，[无参数函数、字典基本功能，语法设计的取舍有感](https://www.oschina.net/news/117081/grasspy-updated)
+- 16 日，[匿名函数，lambda表达式初步](https://zhuanlan.zhihu.com/p/161263901)
+- 24 日，[完善函数功能，常用字拆分数据处理实例](https://zhuanlan.zhihu.com/p/163588221)
+
+#### 8 月
+- 7 日，[通过玩三岁游戏完善语言功能](https://zhuanlan.zhihu.com/p/174263153)
