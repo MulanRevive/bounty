@@ -122,3 +122,9 @@
 
 #### 8 月
 - 7 日，[通过玩三岁游戏完善语言功能](https://zhuanlan.zhihu.com/p/174263153)
+
+- 8 日，小结了[木兰编程语言待重现语法和功能](https://zhuanlan.zhihu.com/p/176769490)，在[此 issue](https://gitee.com/MulanRevive/mulan-rework/issues/I1SEU5) 持续更新。
+
+- 18 日，[引用本地木兰模块；模拟凑十法加法](https://zhuanlan.zhihu.com/p/190043049)
+
+- 28 日，[支持乘法省略乘号（2长+3宽）等等](https://zhuanlan.zhihu.com/p/205190684)
