@@ -1,0 +1,41 @@
+源自[此文](https://zhuanlan.zhihu.com/p/176769490)，随进展更新。
+
+眨眼过了半年，该盘点一下。下面的任务按照粗估实现所需 Python 代码行数分为小（30 之内）、大（100 以上），测试用例另算：
+
+注：下面仅仅是对功能大概有数的部分，还有些不明功能的语法规则列在最后。
+
+## 待完成
+
+### 小
+
+- 【20】在类型内定义类型（逆向工程中的语法规则为 type_stmt : type_define）
+- 【30】在类型内定义属性（property相关）
+- 【20】带类型赋值（anno_assign）
+- 【20】抛出声明（throw_stmt）
+- 【10】浮点数（FLOAT_LITERAL）
+- 【50】补完增量赋值（aug_assign）参考[此 commit](https://gitee.com/MulanRevive/mulan-rework/commit/c12403b68dea65767c30e8cdc16e035acee45941)，添加余下的 *= ^= |= &= /= %=等等
+- 【20】补完二元表达式（bin_expr）参考[此 commit](https://gitee.com/MulanRevive/mulan-rework/commit/24ab68df882aa91f82f9252e73dc1595b03e6fad) 添加余下的 >> << & | % 
+- 【10】补完一元表达式（unary_expr）# ~
+- 【30】YIELD
+- 【30】SUPER
+
+### 大
+
+- 【100】try-with-catch-final
+- 【100】变长参数（DOTDOTDOT）
+- 【150】补完操作符定义，包括二元、一元等。参考[此 commit](https://gitee.com/MulanRevive/mulan-rework/commit/3a51c099c7eae21c2aff52076526759a7a5c264e)
+- 【150】交互控制台（REPL）
+
+### 功能不确定
+
+- 【20】type_name : type_name [ type_list ]
+- module_name_ : DOTDOT
+- primary_expr : ( name : type_name , param_list_not_empty )
+- name_const : DOLLAR
+- lambda_param : primary_expr
+
+## 已完成
+
+- 【8/23】bases : : prefix_exprs [提交 84f375](https://gitee.com/MulanRevive/mulan-rework/commit/84f3752aa70c8ffb444edc62a0227d3e099a92c7)
+- 【8/26】iterator : prefix_exprs [提交 10e90c6](https://gitee.com/MulanRevive/mulan-rework/commit/10e90c65e1377075ea5dce655c50b626a7d27dfe)
+- 【8/28】factor_expr：[提交 e41ff8](https://gitee.com/MulanRevive/mulan-rework/commit/e41ff8c84b09d01ff8d334eb4664fd902294baca)
