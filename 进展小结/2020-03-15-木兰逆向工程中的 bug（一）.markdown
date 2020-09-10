@@ -1,0 +1,25 @@
+续前文[基于「木兰」逆向工程用 pyinstaller 生成可执行文件](https://zhuanlan.zhihu.com/p/107836848)。开始研究为何这些测试不过。
+
+下面是几个已修复的问题：
+## -1不能正确解析
+
+是因为[多了无用的 return 代码](https://github.com/MulanRevive/mulan/commit/949796ef2dd7eeb9c25656be5b1ed08c90bad9ef)，屏蔽了正确的 return
+## +=被转换为幂
+
+是因为一个 [elif 错写成了 if](https://github.com/MulanRevive/mulan/commit/d1ba6170f1ebd7a6bda770bd434be55fd1e9cba8)
+## 不能解析^
+
+是因为条件[^写成了**](https://github.com/MulanRevive/mulan/commit/34aa019d251820b1617c9b484af738832bb14c05)。写下这句话的时候我才反应过来——这绝对不是反编译的锅。
+## 类型定义错误
+
+是因为 [if 块缩进错误](https://github.com/MulanRevive/mulan/commit/45401f5db2592c5302edd5941a0280cc3a814b03)
+
+
+最后还剩下一个orelse[问题](https://github.com/MulanRevive/bounty/issues/7#issuecomment-599173634)。 这两个测试未过：
+
+失败： if_elif.mulan 期望：b'1' 实际：b''
+失败： if_elif_else.mulan 期望：b'3' 实际：b''
+
+在此请教逆向工程原作者 @肖剑 ：不知在原始逆向工程的基础上作了哪些修改？可否都分享一下？当然欢迎参与本项目。
+
+顺便 @yoyoo程 ，如果有兴趣跟进的话。

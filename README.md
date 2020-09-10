@@ -128,3 +128,5 @@
 
 #### 9 月
 - 3 日，[优先级实现细节阶段小结与问题](https://zhuanlan.zhihu.com/p/215864788)
+- 7 日，[阶段小结，重申悬赏](https://zhuanlan.zhihu.com/p/224600854)
+- 9 日，[整理测试用例，回归测试](https://zhuanlan.zhihu.com/p/230155471)
