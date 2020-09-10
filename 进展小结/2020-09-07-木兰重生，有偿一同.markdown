@@ -1,0 +1,13 @@
+金秋九月，「木兰」编程语言[重现项目](https://zhuanlan.zhihu.com/p/103895446)跌跌撞撞已是七月有余。虽[有进展](https://zhuanlan.zhihu.com/p/104001337)，离[目标](https://github.com/MulanRevive/bounty/blob/master/%E5%A4%8D%E7%8E%B0%E6%96%87%E6%A1%A3/README.md)仍路漫漫。
+
+除[确定的开发任务](https://gitee.com/MulanRevive/mulan-rework/issues/I1SEU5)外，代码审核、[测试](https://gitee.com/MulanRevive/mulan-rework/tree/master/%E6%B5%8B%E8%AF%95)、[文档](https://gitee.com/MulanRevive/mulan-rework/issues/I1U36D)、实现细节的推敲（[如此](https://gitee.com/MulanRevive/mulan-rework/issues/I1U14O)）、周边功能如 [IDE 辅助插件](https://marketplace.visualstudio.com/items?itemName=CodeInChinese.ulang)、设计意图分析等等都需人手。不少子任务不需编译器知识且较小，可选任一个着手。酬金公开商议决定，参见[先例](https://github.com/MulanRevive/bounty/issues/1)。
+
+如有意参与，欢迎[在此](https://github.com/MulanRevive/bounty)开[帖](https://github.com/MulanRevive/bounty/issues)自荐并选择合适入手点。
+
+[当前实现](https://gitee.com/MulanRevive/mulan-rework)基本参考[原始 exe ](https://github.com/MulanRevive/bounty/tree/master/%E5%8E%9F%E5%A7%8B%E8%B5%84%E6%96%99/%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6)反编译出的 [Python 源码](https://github.com/MulanRevive/mulan)，但用了[中文命名的标识符](https://zhuanlan.zhihu.com/p/215864788)、中文[反馈信息](https://zhuanlan.zhihu.com/p/148065426)等等，为加深自己理解，也更易于新手参与。
+
+虚位以待！
+
+***补：就在这说话功夫，喜闻木兰复现项目有幸获得码云推荐，是激励更是鞭策。***
+
+![](截图/2020-09-07_码云推荐.png)
