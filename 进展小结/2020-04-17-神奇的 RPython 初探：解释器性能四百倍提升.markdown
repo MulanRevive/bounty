@@ -8,7 +8,7 @@
 
 从此下载例程：[Andrew Brown 的 pypy 入门](https://bitbucket.org/brownan/pypy-tutorial/src/default/)
 
-首先在 Mac 下用了 condo 创建了 python 2.7 环境， rpython 需要（可惜，貌似就不能用中文命名标识符了）。
+首先在 Mac 下用了 condo 创建了 python 2.7 环境， [rpython 需要](https://doc.pypy.org/en/latest/faq.html?highlight=python2#how-long-will-pypy-support-python2)（可惜，貌似就不能用中文命名标识符了）。
 
 两种运行 rpython 的方法：
 
