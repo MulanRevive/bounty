@@ -1,0 +1,6 @@
+type 人 {
+  func $起名(名字) {
+    $名字 = 名字; return self // 等于 return $
+  }
+}
+println(人().起名("木兰").名字)
