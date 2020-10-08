@@ -130,3 +130,12 @@
 - 3 日，[优先级实现细节阶段小结与问题](https://zhuanlan.zhihu.com/p/215864788)
 - 7 日，[阶段小结，重申悬赏](https://zhuanlan.zhihu.com/p/224600854)
 - 9 日，[整理测试用例，回归测试](https://zhuanlan.zhihu.com/p/230155471)
+- 11 日，[木兰 vs. Python 之语法对用户体验的影响（一）](https://zhuanlan.zhihu.com/p/237379701)
+- 14 日，[交互环境复现，新添新手入门](https://zhuanlan.zhihu.com/p/245390062)
+- 21 日，[150 行木兰代码为木兰自身实现高亮效果](https://zhuanlan.zhihu.com/p/257726779)
+- 25 日，[$ 的妙用，更多编辑器高亮](https://zhuanlan.zhihu.com/p/259467288)
+
+#### 10 月
+- 1 日，[更多 $ 的妙用，self 的拓展语义](https://zhuanlan.zhihu.com/p/261048633)
+- 6 日，[木兰代码格式化之自动调整缩进的 150 倍性能优化](https://zhuanlan.zhihu.com/p/262210417)
+- 8 日，[与 Python 生态的兼容问题；字符串插值](https://zhuanlan.zhihu.com/p/262835743)
