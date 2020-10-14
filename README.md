@@ -139,3 +139,5 @@
 - 1 日，[更多 $ 的妙用，self 的拓展语义](https://zhuanlan.zhihu.com/p/261048633)
 - 6 日，[木兰代码格式化之自动调整缩进的 150 倍性能优化](https://zhuanlan.zhihu.com/p/262210417)
 - 8 日，[与 Python 生态的兼容问题；字符串插值](https://zhuanlan.zhihu.com/p/262835743)
+- 11 日，[重温初见木兰的那个战场——二零二零年一月「木兰」编程语言风暴亲历记](https://zhuanlan.zhihu.com/p/265091649)
+- 14 日，[PyPI 发布 ulang 0.0.14.1](https://zhuanlan.zhihu.com/p/265695809)
