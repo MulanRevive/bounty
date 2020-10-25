@@ -141,3 +141,6 @@
 - 8 日，[与 Python 生态的兼容问题；字符串插值](https://zhuanlan.zhihu.com/p/262835743)
 - 11 日，[重温初见木兰的那个战场——二零二零年一月「木兰」编程语言风暴亲历记](https://zhuanlan.zhihu.com/p/265091649)
 - 14 日，[PyPI 发布 ulang 0.0.14.1](https://zhuanlan.zhihu.com/p/265695809)
+- 17 日，[0.0.14.3：井字棋演示，tuple、枚举等](https://zhuanlan.zhihu.com/p/266428706)
+- 21 日，[0.0.14.4：中文报错信息规整，枚举引用新发现](https://zhuanlan.zhihu.com/p/267686876)
+- 25 日，[0.0.14.6：网络服务演示；with...as 的替代语法](https://zhuanlan.zhihu.com/p/268660973)
