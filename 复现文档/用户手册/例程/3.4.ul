@@ -1,0 +1,3 @@
+func hello(p : Person) {
+  println("hi " + p.name)
+}

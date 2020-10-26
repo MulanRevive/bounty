@@ -1,0 +1,4 @@
+movies = ['囧妈', '人在囧途']
+for movie in movies {
+  println(movie, len(movie))
+}

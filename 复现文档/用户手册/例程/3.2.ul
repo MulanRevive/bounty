@@ -1,0 +1,4 @@
+func person(name="小白", age=10) {
+  println(name + " " + str(age))
+}
+person()

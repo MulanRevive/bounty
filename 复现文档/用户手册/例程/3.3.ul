@@ -1,0 +1,11 @@
+type Person {
+  {
+    name = "无名"
+  }
+
+  func $__init__(name) {
+    self.name = name
+  }
+}
+mulan = Person("木兰")
+println(mulan.name)

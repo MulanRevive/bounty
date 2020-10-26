@@ -1,0 +1,3 @@
+for k, v in phone.items() {
+  println(k, v)
+}

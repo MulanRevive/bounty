@@ -1,0 +1,3 @@
+func meet : Person {
+  return Person("好好")
+}

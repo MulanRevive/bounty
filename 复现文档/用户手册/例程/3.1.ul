@@ -1,0 +1,4 @@
+func count {
+  println("123")
+}
+count

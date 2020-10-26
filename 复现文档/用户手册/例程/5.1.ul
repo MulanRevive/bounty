@@ -1,0 +1,5 @@
+squares = []
+for n in 0..10 {
+  squares.append(n^2)
+}
+squares

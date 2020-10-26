@@ -1,0 +1,8 @@
+age = 37
+if age >= 40 {
+     println('不惑')
+} elif age >= 30 {
+     println('而立')
+} else {
+     println('再说')
+}
