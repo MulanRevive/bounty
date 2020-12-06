@@ -144,3 +144,13 @@
 - 17 日，[0.0.14.3：井字棋演示，tuple、枚举等](https://zhuanlan.zhihu.com/p/266428706)
 - 21 日，[0.0.14.4：中文报错信息规整，枚举引用新发现](https://zhuanlan.zhihu.com/p/267686876)
 - 25 日，[0.0.14.6：网络服务演示；with...as 的替代语法](https://zhuanlan.zhihu.com/p/268660973)
+
+#### 11 月
+- 1 日，[0.0.14.7：功能覆盖初版用户手册；Gitee Go 流水线尝鲜](https://zhuanlan.zhihu.com/p/271636727)
+- 6 日，[0.0.14.8：websocket 聊天演示；部分比较 Python 语法](https://zhuanlan.zhihu.com/p/277557485)
+- 18 日，[0.0.15.0：基于网络的运行环境；词法错误处理](https://zhuanlan.zhihu.com/p/301086221)
+- 25 日，[为木兰开发环境雏形添加输入补全，功能测试大提速](https://zhuanlan.zhihu.com/p/313557385)
+- 30 日，为简化正则表达式读写，[构思相关 API](https://zhuanlan.zhihu.com/p/323940002)
+
+#### 12 月
+- 4 日，[用木兰编程语言编写文字冒险游戏（前八章）](https://zhuanlan.zhihu.com/p/331747102)
