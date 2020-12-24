@@ -154,3 +154,7 @@
 
 #### 12 月
 - 4 日，[用木兰编程语言编写文字冒险游戏（前八章）](https://zhuanlan.zhihu.com/p/331747102)
+- 6 日，[小结正则表达式 API，寻觅合作者](https://zhuanlan.zhihu.com/p/333137600)
+- 12 日，[文字冒险游戏九到十一章](https://zhuanlan.zhihu.com/p/336568481)
+- 14 日，[0.0.15.1：继续改写 Python 冒险游戏；引用包路径规则小结](https://zhuanlan.zhihu.com/p/337101227)
+- 23 日，[木兰语言的引用相关功能与问题新发现](https://zhuanlan.zhihu.com/p/339033162)
