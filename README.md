@@ -158,3 +158,4 @@
 - 12 日，[文字冒险游戏九到十一章](https://zhuanlan.zhihu.com/p/336568481)
 - 14 日，[0.0.15.1：继续改写 Python 冒险游戏；引用包路径规则小结](https://zhuanlan.zhihu.com/p/337101227)
 - 23 日，[木兰语言的引用相关功能与问题新发现](https://zhuanlan.zhihu.com/p/339033162)
+- 28 日，[对 PyPI 发布版和 PyInstaller 生成版在 Python 路径方面的差异分析](https://zhuanlan.zhihu.com/p/340410951)
