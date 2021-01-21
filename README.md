@@ -167,3 +167,4 @@
 
 - 4 日，继续[改写 Python 文字冒险游戏（十三、四章），又一个特性发现](https://zhuanlan.zhihu.com/p/342058152)
 - 17 日，[重现木兰编程语言的基本 try……catch 语法](https://zhuanlan.zhihu.com/p/345139002)
+- 21 日，[木兰编程语言一岁了！](https://zhuanlan.zhihu.com/p/345851006)
