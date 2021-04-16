@@ -171,3 +171,8 @@
 
 #### 2 月
 - 9 日，[木兰语言多次引用模块的行为小结](https://zhuanlan.zhihu.com/p/350337192)
+- 19 日，[木兰编程语言报错信息分类与可用性简析](https://zhuanlan.zhihu.com/p/351483957)
+- 24 日，[从木兰的 1[0] = [0] 有感编程语言语法设计的舍与得](https://zhuanlan.zhihu.com/p/352660693)
+
+#### 四月
+- 2 日，[木兰语言 0.0.17：着手由 Python 语法树生成木兰源码](https://zhuanlan.zhihu.com/p/362071943)
