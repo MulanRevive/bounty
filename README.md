@@ -178,3 +178,7 @@
 - 2 日，[木兰语言 0.0.17：着手由 Python 语法树生成木兰源码](https://zhuanlan.zhihu.com/p/362071943)
 - 20 日，[0.0.17.1：源码生成支持更多函数、类相关语法](https://zhuanlan.zhihu.com/p/366408277)
 - 30 日，[0.0.17.2：实现简易网页浏览器，又一次碰到语法歧义](https://zhuanlan.zhihu.com/p/369268306)
+
+#### 五月
+
+- 5 日，[木兰 0.0.17.3 支持不需 __init__的 super 调用](https://zhuanlan.zhihu.com/p/370117192)
