@@ -182,3 +182,4 @@
 #### 五月
 
 - 5 日，[木兰 0.0.17.3 支持不需 __init__的 super 调用](https://zhuanlan.zhihu.com/p/370117192)
+- 13 日，[木兰语言 0.0.17.4 发现依赖库风险、不支持 in；发布 Gitee Reward 首批悬赏任务](https://zhuanlan.zhihu.com/p/372021884)
