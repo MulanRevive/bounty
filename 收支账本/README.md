@@ -10,4 +10,4 @@
 
 ### 检查账本正确性
 
-运行`$ bean-check 2020.beancount`，应该没有错误输出
+运行`$ bean-check 2020.beancount`，应该没有错误输出。如有"Invalid Token"，也许是因为 beancount [暂不支持中文账号名](https://github.com/beancount/beancount/issues/423) 。
