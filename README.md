@@ -185,3 +185,8 @@
 - 13 日，[木兰语言 0.0.17.4 发现依赖库风险、不支持 in；发布 Gitee Reward 首批悬赏任务](https://zhuanlan.zhihu.com/p/372021884)
 - 17 日，[木兰语言 0.0.18 补完所有内置函数，悬赏任务合作顺利](https://zhuanlan.zhihu.com/p/373278659)
 - 27 日，[木兰语言 0.0.19 补完二元运算；重现 yield 语法；赋值时可指定变量类型](https://zhuanlan.zhihu.com/p/376747637)
+
+#### 七月
+
+- 10 日，[木兰语言 0.0.21 查缺补漏；rply 改进、接口中文化](https://zhuanlan.zhihu.com/p/388440048)
+- 18 日，[木兰语言 0.0.22 继续 py 转木兰；探路 py 3.8](https://zhuanlan.zhihu.com/p/391093875)
