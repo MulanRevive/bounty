@@ -190,3 +190,12 @@
 
 - 10 日，[木兰语言 0.0.21 查缺补漏；rply 改进、接口中文化](https://zhuanlan.zhihu.com/p/388440048)
 - 18 日，[木兰语言 0.0.22 继续 py 转木兰；探路 py 3.8](https://zhuanlan.zhihu.com/p/391093875)
+
+#### 尝试借助 rply 实现无空格语法
+
+- [用 rply-ulang 实现“求8的oct值”语法](https://zhuanlan.zhihu.com/p/378353764)
+- 九月 [解析中文编程语法诸如“删除钟表表”的一次粗糙尝试（上）](https://zhuanlan.zhihu.com/p/411793590)
+- [解析中文编程语法诸如“删除钟表表”的一次粗糙尝试（下）](https://zhuanlan.zhihu.com/p/411991539)
+- [用rply按语法分词实现中文无空格语法设计（一）](https://zhuanlan.zhihu.com/p/412465957)
+- [用 RPly 按语法分词实现中文编程无空格语法设计（二）——生成对应SQL演示](https://zhuanlan.zhihu.com/p/413837369)
+- [从“零”开始设计中文编程语言——SQL领域演示](https://zhuanlan.zhihu.com/p/415732605)
