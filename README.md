@@ -199,3 +199,8 @@
 - [用rply按语法分词实现中文无空格语法设计（一）](https://zhuanlan.zhihu.com/p/412465957)
 - [用 RPly 按语法分词实现中文编程无空格语法设计（二）——生成对应SQL演示](https://zhuanlan.zhihu.com/p/413837369)
 - [从“零”开始设计中文编程语言——SQL领域演示](https://zhuanlan.zhihu.com/p/415732605)
+
+### 2022 年
+#### 1 月
+
+- 17日 [木兰编程语言两岁了](https://zhuanlan.zhihu.com/p/458489345)
