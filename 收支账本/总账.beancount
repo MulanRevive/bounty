@@ -42,6 +42,8 @@ option "operating_currency" "CNY" ; The main currencies you use
 2021-05-16 * "Gitee 悬赏任务：Windows 下两种测试方式输出相差 \r"
     Assets:Budget:总预算             -128.00 CNY
 
+2021-05-16 open Expenses:Bounty:贡献者fcfco
+
 2021-05-16 * "通过首个 Gitee 悬赏任务：重现一个内置函数——bytes"
     Expenses:Bounty:贡献者fcfco             100.00 CNY
 
@@ -80,3 +82,13 @@ option "operating_currency" "CNY" ; The main currencies you use
 
 2021-05-31 * "Gitee 悬赏任务解决但未领悬赏因此退款：Windows 下两种测试方式输出相差 \r"
     Assets:Budget:总预算             128.00 CNY
+
+2022-05-29 open Expenses:Bounty:贡献者LaomoBK
+
+2022-05-29 * "通过 Gitee 悬赏任务：【老手】木兰源码转换为 Python"
+    Expenses:Bounty:贡献者LaomoBK            788.00 CNY
+
+2022-06-23 open Expenses:Bounty:贡献者cndp
+
+2022-06-23 * "通过 Gitee 悬赏任务：重现语法——支持 lambda 形参为空或者多个，以及指定参数类型"
+    Expenses:Bounty:贡献者cndp           268.00 CNY
