@@ -92,3 +92,15 @@ option "operating_currency" "CNY" ; The main currencies you use
 
 2022-06-23 * "通过 Gitee 悬赏任务：重现语法——支持 lambda 形参为空或者多个，以及指定参数类型"
     Expenses:Bounty:贡献者cndp           268.00 CNY
+
+2021-07-03 * "新添悬赏任务：重现语法——函数 可变长参数"
+    Assets:Budget:总预算             -318.00 CNY
+
+2021-07-03 * "新添悬赏任务：测试.unittest.原始可执行文件 报错"
+    Assets:Budget:总预算             -100.00 CNY
+
+2022-07-24 * "通过 Gitee 悬赏任务：重现语法——函数 可变长参数"
+    Expenses:Bounty:贡献者cndp           318.00 CNY
+
+2022-08-04 * "测试.unittest.原始可执行文件 报错"
+    Expenses:Bounty:贡献者LaomoBK            100.00 CNY
