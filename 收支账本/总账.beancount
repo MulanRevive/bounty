@@ -30,77 +30,107 @@ option "operating_currency" "CNY" ; The main currencies you use
     Expenses:Bounty:贡献者1             800.00 CNY
     Income:Donation:赞助者0             -800.00 CNY
 
+** 注意：需确认gitee是否将悬赏金完全转给贡献者
+2020-01-25 open Assets:Budget:Gitee悬赏 CNY
+
 2021-05-11 * "首个 Gitee 悬赏任务：【新人优先】重现一个内置函数——bytes"
     Assets:Budget:总预算             -100.00 CNY
+    Assets:Budget:Gitee悬赏         100.00 CNY
 
 2021-05-11 * "Gitee 悬赏任务：补完余下三十多个内置函数"
     Assets:Budget:总预算             -128.00 CNY
+    Assets:Budget:Gitee悬赏         128.00 CNY
 
 2021-05-11 * "Gitee 悬赏任务：木兰源码转换为 Python"
     Assets:Budget:总预算             -688.00 CNY
+    Assets:Budget:Gitee悬赏         688.00 CNY
 
 2021-05-16 * "Gitee 悬赏任务：Windows 下两种测试方式输出相差 \r"
     Assets:Budget:总预算             -128.00 CNY
+    Assets:Budget:Gitee悬赏         128.00 CNY
 
 2021-05-16 open Expenses:Bounty:贡献者fcfco
 
 2021-05-16 * "通过首个 Gitee 悬赏任务：重现一个内置函数——bytes"
     Expenses:Bounty:贡献者fcfco             100.00 CNY
+    Assets:Budget:Gitee悬赏         -100.00 CNY
 
 2021-05-16 * "通过 Gitee 悬赏任务：补完余下三十多个内置函数"
     Expenses:Bounty:贡献者fcfco             128.00 CNY
+    Assets:Budget:Gitee悬赏         -128.00 CNY
 
 2021-05-20 * "Gitee 悬赏任务：补完二元表达式（bin_expr）的四个运算符"
     Assets:Budget:总预算             -100.00 CNY
+    Assets:Budget:Gitee悬赏         100.00 CNY
 
 2021-05-21 * "通过 Gitee 悬赏任务：补完二元表达式（bin_expr）的四个运算符"
     Expenses:Bounty:贡献者fcfco             100.00 CNY
+    Assets:Budget:Gitee悬赏         -100.00 CNY
 
 2021-05-24 * "Gitee 悬赏任务：【新人优先】补完增量赋值 *= ^= |= &= /= %= 等等"
     Assets:Budget:总预算             -100.00 CNY
+    Assets:Budget:Gitee悬赏         100.00 CNY
 
 2021-05-24 * "Gitee 悬赏任务：重现语法——赋值时指定变量类型"
     Assets:Budget:总预算             -128.00 CNY
+    Assets:Budget:Gitee悬赏         128.00 CNY
 
 2021-05-24 * "Gitee 悬赏任务：【进阶】重现所有 yield 相关语法"
     Assets:Budget:总预算             -188.00 CNY
+    Assets:Budget:Gitee悬赏         188.00 CNY
 
 2021-05-28 * "通过 Gitee 悬赏任务：【进阶】重现所有 yield 相关语法"
     Expenses:Bounty:贡献者fcfco             188.00 CNY
+    Assets:Budget:Gitee悬赏         -188.00 CNY
 
 2021-05-30 * "通过 Gitee 悬赏任务：重现语法——赋值时指定变量类型"
     Expenses:Bounty:贡献者fcfco             128.00 CNY
+    Assets:Budget:Gitee悬赏         -128.00 CNY
 
 2021-05-30 * "Gitee 悬赏任务：重现语法——支持 lambda 形参为空或者多个，以及指定参数类型"
     Assets:Budget:总预算             -268.00 CNY
+    Assets:Budget:Gitee悬赏         268.00 CNY
 
 2021-05-31 * "Gitee 悬赏任务超时退款：木兰源码转换为 Python"
     Assets:Budget:总预算             688.00 CNY
+    Assets:Budget:Gitee悬赏         -688.00 CNY
 
 2021-05-31 * "Gitee 悬赏任务重开：木兰源码转换为 Python"
     Assets:Budget:总预算             -788.00 CNY
+    Assets:Budget:Gitee悬赏         788.00 CNY
 
 2021-05-31 * "Gitee 悬赏任务解决但未领悬赏因此退款：Windows 下两种测试方式输出相差 \r"
     Assets:Budget:总预算             128.00 CNY
+    Assets:Budget:Gitee悬赏         -128.00 CNY
+
+2022-01-25 open Expenses:Bounty:贡献者cndp
+
+2022-01-25 * "完成 Gitee 悬赏任务：【新人优先】补完增量赋值 *= ^= |= &= /= %= 等等"
+    Expenses:Bounty:贡献者cndp             100.00 CNY
+    Assets:Budget:Gitee悬赏         -100.00 CNY
 
 2022-05-29 open Expenses:Bounty:贡献者LaomoBK
 
 2022-05-29 * "通过 Gitee 悬赏任务：【老手】木兰源码转换为 Python"
     Expenses:Bounty:贡献者LaomoBK            788.00 CNY
-
-2022-06-23 open Expenses:Bounty:贡献者cndp
+    Assets:Budget:Gitee悬赏         -788.00 CNY
 
 2022-06-23 * "通过 Gitee 悬赏任务：重现语法——支持 lambda 形参为空或者多个，以及指定参数类型"
     Expenses:Bounty:贡献者cndp           268.00 CNY
+    Assets:Budget:Gitee悬赏         -268.00 CNY
 
 2021-07-03 * "新添悬赏任务：重现语法——函数 可变长参数"
     Assets:Budget:总预算             -318.00 CNY
+    Assets:Budget:Gitee悬赏         318.00 CNY
 
 2021-07-03 * "新添悬赏任务：测试.unittest.原始可执行文件 报错"
     Assets:Budget:总预算             -100.00 CNY
+    Assets:Budget:Gitee悬赏         100.00 CNY
 
 2022-07-24 * "通过 Gitee 悬赏任务：重现语法——函数 可变长参数"
     Expenses:Bounty:贡献者cndp           318.00 CNY
+    Assets:Budget:Gitee悬赏         -318.00 CNY
 
 2022-08-04 * "测试.unittest.原始可执行文件 报错"
     Expenses:Bounty:贡献者LaomoBK            100.00 CNY
+    Assets:Budget:Gitee悬赏         -100.00 CNY
