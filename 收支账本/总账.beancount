@@ -134,3 +134,101 @@ option "operating_currency" "CNY" ; The main currencies you use
 2022-08-04 * "测试.unittest.原始可执行文件 报错"
     Expenses:Bounty:贡献者LaomoBK            100.00 CNY
     Assets:Budget:Gitee悬赏         -100.00 CNY
+
+** 10% gitee服务费，10% 捐给项目（已开捐赠，待确认）
+
+2022-10-11 * "新添悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml"
+    Assets:Budget:总预算             -168.00 CNY
+    Assets:Budget:Gitee悬赏         168.00 CNY
+
+2022-10-11  * "新添悬赏任务：添加github workflow与对应徽章"
+    Assets:Budget:总预算             -128.00 CNY
+    Assets:Budget:Gitee悬赏         128.00 CNY
+
+2022-10-17  * "新添悬赏任务：复现所有命令行参数"
+    Assets:Budget:总预算             -888.00 CNY
+    Assets:Budget:Gitee悬赏         888.00 CNY
+
+2022-10-20  * "新添悬赏任务：重现语法——补全 super 功能"
+    Assets:Budget:总预算             -218.00 CNY
+    Assets:Budget:Gitee悬赏         218.00 CNY
+
+2022-10-20  * "重现语法——在类型内定义类型"
+    Assets:Budget:总预算             -168.00 CNY
+    Assets:Budget:Gitee悬赏         168.00 CNY
+
+2022-10-20  * "重现语法——支持十六进制数"
+    Assets:Budget:总预算             -218.00 CNY
+    Assets:Budget:Gitee悬赏         218.00 CNY
+
+2022-10-20  * "重现语法——补全 try ... catch ... finally"
+    Assets:Budget:总预算             -688.00 CNY
+    Assets:Budget:Gitee悬赏         688.00 CNY
+
+2022-10-21  * "新添悬赏任务：重现语法——支持重载余下所有操作符，包括二元、一元等"
+    Assets:Budget:总预算             -888.00 CNY
+    Assets:Budget:Gitee悬赏         888.00 CNY
+
+2022-10-22  * "新添悬赏任务：重现语法——支持 .. 作为模块路径"
+    Assets:Budget:总预算             -168.00 CNY
+    Assets:Budget:Gitee悬赏         168.00 CNY
+
+2022-10-22  * "新添悬赏任务：重现语法——（语义待确定）复杂类型注解"
+    Assets:Budget:总预算             -318.00 CNY
+    Assets:Budget:Gitee悬赏         318.00 CNY
+
+2022-11-01 * "通过 Gitee 悬赏任务：重现语法——支持 .. 作为模块路径"
+    Expenses:Bounty:贡献者fcfco      168.00 CNY
+    Assets:Budget:Gitee悬赏         -168.00 CNY
+
+2022-11-03 * "通过 Gitee 悬赏任务：重现语法——补全 super 功能"
+    Expenses:Bounty:贡献者fcfco      218.00 CNY
+    Assets:Budget:Gitee悬赏         -218.00 CNY
+
+2022-11-04 * "通过 Gitee 悬赏任务：重现语法——在类型内定义类型"
+    Expenses:Bounty:贡献者fcfco      168.00 CNY
+    Assets:Budget:Gitee悬赏         -168.00 CNY
+
+2022-11-06 * "通过 Gitee 悬赏任务：重现语法——支持十六进制数"
+    Expenses:Bounty:贡献者fcfco      218.00 CNY
+    Assets:Budget:Gitee悬赏         -218.00 CNY
+
+** 应在悬赏到期时(十五号左右)由gitee平台自动付款, 现在(12月2日)显示"结款中"
+2022-11-08 * "通过 Gitee 悬赏任务：重现语法——支持十六进制数"
+    Expenses:Bounty:贡献者fcfco      318.00 CNY
+    Assets:Budget:Gitee悬赏         -318.00 CNY
+
+2022-11-16 * "通过 Gitee 悬赏任务：重现语法——补全 try ... catch ... finally"
+    Expenses:Bounty:贡献者fcfco      688.00 CNY
+    Assets:Budget:Gitee悬赏         -688.00 CNY
+
+2022-11-28 * "通过 Gitee 悬赏任务：重现语法——支持重载余下所有操作符，包括二元、一元等"
+    Expenses:Bounty:贡献者fcfco      888.00 CNY
+    Assets:Budget:Gitee悬赏         -888.00 CNY
+
+** 2022-11-30 以下三个任务由于悬赏过期短暂退回
+2022-11-30  * "悬赏过期：添加github workflow与对应徽章"
+    Assets:Budget:总预算             128.00 CNY
+    Assets:Budget:Gitee悬赏         -128.00 CNY
+
+2022-11-30  * "悬赏过期：复现所有命令行参数"
+    Assets:Budget:总预算             888.00 CNY
+    Assets:Budget:Gitee悬赏         -888.00 CNY
+
+2022-11-30 * "重启悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml"
+    Assets:Budget:总预算             168.00 CNY
+    Assets:Budget:Gitee悬赏         -168.00 CNY
+
+** 重新发布任务
+
+2022-12-01  * "重启悬赏任务：复现所有命令行参数"
+    Assets:Budget:总预算             -888.00 CNY
+    Assets:Budget:Gitee悬赏         888.00 CNY
+
+2022-12-01 * "重启悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml"
+    Assets:Budget:总预算             -188.00 CNY
+    Assets:Budget:Gitee悬赏         188.00 CNY
+
+2022-12-02 * "重启悬赏任务：添加github workflow与对应徽章"
+    Assets:Budget:总预算             -128.00 CNY
+    Assets:Budget:Gitee悬赏         128.00 CNY
