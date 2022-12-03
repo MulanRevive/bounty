@@ -1,6 +1,6 @@
 源自[此文](https://zhuanlan.zhihu.com/p/176769490)，随进展更新。
 
-眨眼过了半年，该盘点一下。下面的任务按照粗估实现所需 Python 代码行数分为小（30 之内）、大（100 以上），另需测试用例：
+眨眼过了半年(此为文档创建时间)，该盘点一下。下面的任务按照粗估实现所需 Python 代码行数分为小（30 之内）、大（100 以上），另需测试用例：
 
 注：下面仅仅是对功能大概有数的部分，还有些不明功能的语法规则列在最后。
 
@@ -8,48 +8,60 @@
 
 ### 小
 
-- 【20】在类型内定义类型（逆向工程中的语法规则为 type_stmt : type_define）
-- 【30】在类型内定义属性（property相关）
-- 【10】浮点数（FLOAT_LITERAL）
-- 【10】补完一元表达式（unary_expr）[#语法](https://gitee.com/MulanRevive/mulan-rework/issues/I23FKW) ~
-- 【30】YIELD
-- 【30】SUPER
+暂无
 
 ### 大
 
-- 【100】try-with-catch-final
-- 【150】补完操作符定义，包括二元、一元等。参考[此 commit](https://gitee.com/MulanRevive/mulan-rework/commit/3a51c099c7eae21c2aff52076526759a7a5c264e)
+暂无
 
 ### 周边功能
 
 这些功能貌似都在原始可执行文件中：
-- 【630】从语法树生成木兰代码 （进行中，还余 400 行左右）
-- 【470】从语法树到 blockly xml
+- 【630】从语法树生成木兰代码 （按需进行，还余 400 行左右）
+- 【470】从语法树到 blockly xml. [悬赏中](https://gitee.com/MulanRevive/mulan-rework/issues/I5V2ZH?from=project-issue)
 
 ### 功能不确定
 
-- 【20】type_name : type_name [ type_list ]
-- module_name_ : DOTDOT
+暂无
 
 ## 已完成
 
 - 用 [pyinstaller](https://pyinstaller.readthedocs.io/en/stable/index.html) 打包为 windows 下可执行文件
+
+### 2020 年
+
+- 补完一元表达式（unary_expr）[#语法](https://gitee.com/MulanRevive/mulan-rework/issues/I23FKW) [~](https://gitee.com/MulanRevive/mulan-rework/commit/49e98c1d5232e54c41b837b057fe532486925876)
+- 5/21 [支持小数](https://gitee.com/MulanRevive/mulan-rework/commit/b1cc1e6c6600a039c1d43f6215759ca37757060f)
 - 【8/23】bases : : prefix_exprs [提交 84f375](https://gitee.com/MulanRevive/mulan-rework/commit/84f3752aa70c8ffb444edc62a0227d3e099a92c7)
 - 【8/26】iterator : prefix_exprs [提交 10e90c6](https://gitee.com/MulanRevive/mulan-rework/commit/10e90c65e1377075ea5dce655c50b626a7d27dfe)
 - 【8/28】factor_expr：[提交 e41ff8](https://gitee.com/MulanRevive/mulan-rework/commit/e41ff8c84b09d01ff8d334eb4664fd902294baca)
 - 【9/14】【150】交互控制台（REPL） !1 
 - 【9/24】name_const : DOLLAR [提交](https://gitee.com/MulanRevive/mulan-rework/commit/cca8343e088a200558ccabda0274a383bbdf33ea)，功能仍待探索
+- 10/1 [支持应变属性](https://gitee.com/MulanRevive/mulan-rework/commit/cb7bc23de11056fd82eec1de5415ad14cf6e8a8a)
 - 【10/7】【30】字符串插值，比如`aa\(v1\)bb`。详见[测试](https://gitee.com/MulanRevive/mulan-rework/commit/f3fd423fecbababb31a6ebec18e4efaad3217529)。 !3 
 - 【10/16】【10】多项前缀表达式：prefix_exprs : prefix_exprs , prefix_expr [提交](https://gitee.com/MulanRevive/mulan-rework/commit/f9a9f20b956d232821021e474576fcdec8149877)
 - 【12/7】【20】抛出声明（throw_stmt） [提交](https://gitee.com/MulanRevive/mulan-rework/commit/dbd9d8832cd7a3664ba4896b52586f2896a1e654)
+
+### 2021 年
+
 - 【2021/5】 
   - 在环境（env）中补全所有内置函数，还有大约 40 个 见此两个悬赏任务 [一](https://gitee.com/MulanRevive/mulan-rework/issues/I3QHXU?from=project-issue) [二](https://gitee.com/MulanRevive/mulan-rework/issues/I3QHKV?from=project-issue)
   - 补完二元表达式（bin_expr）[见此悬赏任务](https://gitee.com/MulanRevive/mulan-rework/issues/I3RQ0A?from=project-issue)
   - [实现yield语法](https://gitee.com/MulanRevive/mulan-rework/pulls/21) (yield_expr) [此悬赏任务](https://gitee.com/MulanRevive/mulan-rework/issues/I3SNP3?from=project-issue)
   - [支持语法——赋值时指定变量类型](https://gitee.com/MulanRevive/mulan-rework/issues/I3RQ0C?from=project-issue)（anno_assign）
+
+### 2022 年
+
 - 【2022/1】[补完增量赋值（aug_assign）](https://gitee.com/MulanRevive/mulan-rework/issues/I3RQ0B?from=project-issue) 参考[此 commit](https://gitee.com/MulanRevive/mulan-rework/commit/c12403b68dea65767c30e8cdc16e035acee45941)，添加余下的 *= ^= |= &= /= %=等等
 - 【2022/5】从语法树生成 Python 代码 [见此悬赏任务](https://gitee.com/MulanRevive/mulan-rework/issues/I3QIEL?from=project-issue)
 - 【2022/6】[悬赏任务：支持 lambda 形参为空或者多个，以及指定参数类型 ](https://gitee.com/MulanRevive/mulan-rework/issues/I3TIKJ?from=project-issue)
   - primary_expr : ( name : type_name , param_list_not_empty )
   - lambda_param : primary_expr 
 - 【2022/7】若干参数（DOTDOTDOT）[此悬赏任务](https://gitee.com/MulanRevive/mulan-rework/issues/I5F7KI?from=project-issue)
+- 【2022/11】
+  - [悬赏任务：支持 .. 作为模块路径](https://gitee.com/MulanRevive/mulan-rework/issues/I5X38F?from=project-issue)
+  - 在类型内定义类型（逆向工程中的语法规则为 type_stmt : type_define）[见此悬赏](https://gitee.com/MulanRevive/mulan-rework/issues/I5WQE6?from=project-issue)
+  - [补全 super 功能](https://gitee.com/MulanRevive/mulan-rework/issues/I5WP2Z)
+  - [（语义待确定）复杂类型注解](https://gitee.com/MulanRevive/mulan-rework/issues/I5X36I?from=project-issue)
+  - [补全 try ... catch ... finally](https://gitee.com/MulanRevive/mulan-rework/pulls/45)，顺带 [解决空块“ast.Pass”在高版本python3.7与低版本生成的语法树不同的问题](https://gitee.com/MulanRevive/mulan-rework/pulls/47)
+  - [支持重载余下所有操作符，包括二元、一元等](https://gitee.com/MulanRevive/mulan-rework/pulls/50)
