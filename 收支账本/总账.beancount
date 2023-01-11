@@ -232,3 +232,14 @@ option "operating_currency" "CNY" ; The main currencies you use
 2022-12-02 * "重启悬赏任务：添加github workflow与对应徽章"
     Assets:Budget:总预算             -128.00 CNY
     Assets:Budget:Gitee悬赏         128.00 CNY
+
+** -原为下划线
+2022-12-06 open Expenses:Bounty:贡献者heStudio-admin
+
+2022-12-08 * "通过 Gitee 悬赏任务：添加github workflow与对应徽章"
+    Expenses:Bounty:贡献者heStudio-admin      128.00 CNY
+    Assets:Budget:Gitee悬赏         -128.00 CNY
+
+2023-01-03 * "通过 Gitee 悬赏任务：复现所有命令行参数"
+    Expenses:Bounty:贡献者LaomoBK             888.00 CNY
+    Assets:Budget:Gitee悬赏         -888.00 CNY
