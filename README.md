@@ -214,3 +214,8 @@
 #### 1 月
 
 - 5 日, [木兰语言 0.1.3 复现大多数命令行选项](https://zhuanlan.zhihu.com/p/596938996)
+- 25 日，[木兰编程语言工具设计与实现中的巧思](https://zhuanlan.zhihu.com/p/601321957)
+
+#### 2 月
+
+- 11 日，北京时间二月十一日一点 [知乎 live 讲座《木兰编程语言重现项目三年小结》](https://www.zhihu.com/lives/1596877608825921536)。自行整理后发布到 [哔哩哔哩](https://space.bilibili.com/35262584/channel/seriesdetail?sid=3044931)、[知乎视频](https://www.zhihu.com/zvideo/1608797608780156930)。
