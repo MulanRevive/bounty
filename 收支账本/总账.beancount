@@ -142,6 +142,10 @@ option "operating_currency" "CNY" ; The main currencies you use
     Assets:Budget:总预算             -168.00 CNY
     Assets:Budget:Gitee悬赏         168.00 CNY
 
+2022-10-11 * "过期退款：【探索原始木兰功能】木兰源码转换为 blockly xml"
+    Assets:Budget:总预算             168.00 CNY
+    Assets:Budget:Gitee悬赏         -168.00 CNY
+
 2022-10-11  * "新添悬赏任务：添加github workflow与对应徽章"
     Assets:Budget:总预算             -128.00 CNY
     Assets:Budget:Gitee悬赏         128.00 CNY
@@ -216,16 +220,13 @@ option "operating_currency" "CNY" ; The main currencies you use
     Assets:Budget:总预算             888.00 CNY
     Assets:Budget:Gitee悬赏         -888.00 CNY
 
-2022-11-30 * "重启悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml"
-    Assets:Budget:总预算             168.00 CNY
-    Assets:Budget:Gitee悬赏         -168.00 CNY
-
 ** 重新发布任务
 
 2022-12-01  * "重启悬赏任务：复现所有命令行参数"
     Assets:Budget:总预算             -888.00 CNY
     Assets:Budget:Gitee悬赏         888.00 CNY
 
+** 退款中：https://gitee.com/MulanRevive/mulan-rework/issues/I5V2ZH
 2022-12-01 * "重启悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml"
     Assets:Budget:总预算             -188.00 CNY
     Assets:Budget:Gitee悬赏         188.00 CNY
@@ -245,6 +246,7 @@ option "operating_currency" "CNY" ; The main currencies you use
     Expenses:Bounty:贡献者LaomoBK             888.00 CNY
     Assets:Budget:Gitee悬赏         -888.00 CNY
 
+** 退款中：https://gitee.com/MulanRevive/mulan-rework/issues/I6B8GO
 2023-01-27 * "二月十一日一点知乎 live 讲座《木兰编程语言重现项目三年小结》，比较原始木兰长期悬赏"
     Assets:Budget:总预算             -100.00 CNY
     Assets:Budget:Gitee悬赏         100.00 CNY
@@ -253,10 +255,12 @@ option "operating_currency" "CNY" ; The main currencies you use
     Assets:Budget:总预算             -168.00 CNY
     Assets:Budget:Gitee悬赏         168.00 CNY
 
+** https://gitee.com/MulanRevive/mulan-rework/issues/I68E9I
 2023-02-12 * "【新手优先】全局变量 ARGV 未赋值；检查其他全局变量、函数等"
     Assets:Budget:总预算             -128.00 CNY
     Assets:Budget:Gitee悬赏         128.00 CNY
 
+** https://gitee.com/MulanRevive/mulan-rework/issues/I668SL
 2023-02-12 * "【新手优先】交互中判断 finally 是否结束"
     Assets:Budget:总预算             -100.00 CNY
     Assets:Budget:Gitee悬赏         100.00 CNY
@@ -304,3 +308,9 @@ option "operating_currency" "CNY" ; The main currencies you use
     Assets:Budget:Gitee悬赏         -188.00 CNY
 
 ** 退款中：https://gitee.com/MulanRevive/mulan-rework/issues/I7UIHT
+2023-08-20 * "在 pypi 发布新版本，以支持 python 3.8，等等"
+    Assets:Budget:总预算             -128.00 CNY
+    Assets:Budget:Gitee悬赏         128.00 CNY
+
+** 2023 Gitee悬赏 余额 644
+** 其中 I668SL I68E9I 悬赏中，100+128=228；I7UIHT，I5V2ZH，I6B8GO 退款中，100+128+188=416
