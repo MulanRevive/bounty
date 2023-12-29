@@ -261,6 +261,7 @@ option "operating_currency" "CNY" ; The main currencies you use
     Assets:Budget:总预算             -100.00 CNY
     Assets:Budget:Gitee悬赏         100.00 CNY
 
+** https://gitee.com/MulanRevive/mulan-rework/issues/I6EGV4
 2023-02-12 * "【老手】增加对 python 3.8 的支持"
     Assets:Budget:总预算             -688.00 CNY
     Assets:Budget:Gitee悬赏         688.00 CNY
@@ -269,7 +270,7 @@ option "operating_currency" "CNY" ; The main currencies you use
     Assets:Budget:总预算             -128.00 CNY
     Assets:Budget:Gitee悬赏         128.00 CNY
 
-2023-03-09 * "实例函数调用println的两种声明方法，调用结果不同"
+2023-03-09 * "通过 Gitee 悬赏任务：实例函数调用println的两种声明方法，调用结果不同"
     Expenses:Bounty:贡献者fcfco      128.00 CNY
     Assets:Budget:Gitee悬赏         -128.00 CNY
 
@@ -277,3 +278,29 @@ option "operating_currency" "CNY" ; The main currencies you use
 2023-03-14 * "在线编辑器的web前端布局出错"
     Assets:Budget:总预算             -128.00 CNY
     Assets:Budget:Gitee悬赏         128.00 CNY
+
+2023-03-30 * "通过 Gitee 悬赏任务：在线编辑器的web前端布局出错"
+    Expenses:Bounty:贡献者fcfco     128.00 CNY
+    Assets:Budget:Gitee悬赏         -128.00 CNY
+
+2021-03-31 * "Gitee 悬赏任务超时退款：报错信息与测试用例不符"
+    Assets:Budget:总预算             168.00 CNY
+    Assets:Budget:Gitee悬赏         -168.00 CNY
+
+** https://gitee.com/MulanRevive/mulan-rework/issues/I6CUCL
+2023-04-01 * "报错信息与测试用例不符"
+    Assets:Budget:总预算             -188.00 CNY
+    Assets:Budget:Gitee悬赏         188.00 CNY
+
+2023-04-20 * "通过 Gitee 悬赏任务：【老手】增加对 python 3.8 的支持"
+    Expenses:Bounty:贡献者LaomoBK    688.00 CNY
+    Assets:Budget:Gitee悬赏         -688.00 CNY
+
+2023-07-21 open Expenses:Bounty:贡献者白油
+
+** https://gitee.com/MulanRevive/mulan-rework/issues/I6CUCL
+2023-07-22 * "通过 Gitee 悬赏任务：报错信息与测试用例不符"
+    Expenses:Bounty:贡献者白油       188.00 CNY
+    Assets:Budget:Gitee悬赏         -188.00 CNY
+
+** 退款中：https://gitee.com/MulanRevive/mulan-rework/issues/I7UIHT
