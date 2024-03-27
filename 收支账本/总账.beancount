@@ -332,3 +332,19 @@ option "operating_currency" "CNY" ; The main currencies you use
 2024-02-02 * "【不限次数长期有效】查漏：重现项目与原始木兰的不同之处"
     Assets:Budget:总预算             -118.00 CNY
     Assets:Budget:Gitee悬赏         118.00 CNY
+
+2024-03-23 open Expenses:Bounty:贡献者lordy
+
+2024-03-24 * "通过 Gitee 悬赏任务：【老手】支持 3.7 和 3.8 的现有基础上，增加对 python 3.9 的支持"
+    Expenses:Bounty:贡献者lordy       888.00 CNY
+    Assets:Budget:Gitee悬赏         -888.00 CNY
+
+2024-03-26 * "通过 Gitee 悬赏任务：pypi 发布支持 python 3.8 的新版本"
+    Expenses:Bounty:贡献者lordy       188.00 CNY
+    Assets:Budget:Gitee悬赏         -188.00 CNY
+
+** https://gitee.com/MulanRevive/mulan-rework/issues/I9B509
+** 截止：2024-05-01
+2024-01-03 * "【老手】支持 3.7-3.9 的现有基础上，增加对 python 3.10-11 的支持"
+    Assets:Budget:总预算             -688.00 CNY
+    Assets:Budget:Gitee悬赏         688.00 CNY
