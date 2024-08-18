@@ -219,3 +219,11 @@
 #### 2 月
 
 - 11 日，北京时间二月十一日一点 [知乎 live 讲座《木兰编程语言重现项目三年小结》](https://www.zhihu.com/lives/1596877608825921536)。自行整理后发布到 [哔哩哔哩](https://space.bilibili.com/35262584/channel/seriesdetail?sid=3044931)、[知乎视频](https://www.zhihu.com/zvideo/1608797608780156930)。
+
+### 2024 年
+
+- 3 月，[木兰编程语言重现发布 0.1.6——支持到py3.11与其他](https://zhuanlan.zhihu.com/p/689843237)
+- 6 月，长期悬赏 [查漏任务](https://gitee.com/MulanRevive/mulan-rework/issues/I90KWQ) 首个发现：[不同系统下测试发布版(v0.1.6)、开发版(v0.1.7)及原始木兰的最大递归深度不同](https://gitee.com/MulanRevive/mulan-rework/pulls/70)
+- 8 月
+  - [从例程看仓颉与木兰编程语言设计（一）](https://zhuanlan.zhihu.com/p/714163596)
+  - pypi 发布 0.1.6.4，支持 py 到 3.12，修正报错信息等
