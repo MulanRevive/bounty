@@ -222,7 +222,7 @@
 
 ### 2024 年
 
-- 3 月，[木兰编程语言重现发布 0.1.6——支持到py3.11与其他](https://zhuanlan.zhihu.com/p/689843237)
+- 3 月，[木兰编程语言重现发布 0.1.6——支持到py3.11与其他](https://zhuanlan.zhihu.com/p/689843237) 并迎来发布版维护者
 - 6 月，长期悬赏 [查漏任务](https://gitee.com/MulanRevive/mulan-rework/issues/I90KWQ) 首个发现：[不同系统下测试发布版(v0.1.6)、开发版(v0.1.7)及原始木兰的最大递归深度不同](https://gitee.com/MulanRevive/mulan-rework/pulls/70)
 - 8 月
   - [从例程看仓颉与木兰编程语言设计（一）](https://zhuanlan.zhihu.com/p/714163596)

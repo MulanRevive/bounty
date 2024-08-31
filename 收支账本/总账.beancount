@@ -227,6 +227,7 @@ option "operating_currency" "CNY" ; The main currencies you use
     Assets:Budget:Gitee悬赏         888.00 CNY
 
 ** 退款中：https://gitee.com/MulanRevive/mulan-rework/issues/I5V2ZH
+** 2024年8月仍未修复，遂关闭
 2022-12-01 * "重启悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml"
     Assets:Budget:总预算             -188.00 CNY
     Assets:Budget:Gitee悬赏         188.00 CNY
@@ -360,3 +361,8 @@ option "operating_currency" "CNY" ; The main currencies you use
 2024-06-29 * "【不限次数长期有效】查漏之二：重现项目与原始木兰的不同之处"
     Assets:Budget:总预算             -118.00 CNY
     Assets:Budget:Gitee悬赏         118.00 CNY
+
+** https://gitee.com/MulanRevive/mulan-rework/issues/IANHYP
+2024-08-29 * "取代失效悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml "
+    Assets:Budget:总预算             -218.00 CNY
+    Assets:Budget:Gitee悬赏         218.00 CNY
