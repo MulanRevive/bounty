@@ -370,3 +370,14 @@ option "operating_currency" "CNY" ; The main currencies you use
 2024-08-29 * "取代失效悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml "
     Assets:Budget:总预算             -218.00 CNY
     Assets:Budget:Gitee悬赏         218.00 CNY
+
+** 从此悬赏开始，悬赏金不再通过gitee支付，亦不用支付手续费。暂仍列在 Gitee悬赏
+
+** https://gitee.com/MulanRevive/mulan-rework/issues/IBF1FT
+2025-06-21 * "【老手】支持 3.7-3.12 的现有基础上，增加对 python 3.13 的支持"
+    Assets:Budget:总预算             -588.00 CNY
+    Assets:Budget:Gitee悬赏         588.00 CNY
+
+2025-08-03 * "通过悬赏任务：【老手】支持 3.7-3.12 的现有基础上，增加对 python 3.13 的支持"
+    Expenses:Bounty:贡献者lordy       588.00 CNY
+    Assets:Budget:Gitee悬赏         -588.00 CNY
