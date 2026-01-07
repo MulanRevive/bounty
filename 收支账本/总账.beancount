@@ -381,3 +381,10 @@ option "operating_currency" "CNY" ; The main currencies you use
 2025-08-03 * "通过悬赏任务：【老手】支持 3.7-3.12 的现有基础上，增加对 python 3.13 的支持"
     Expenses:Bounty:贡献者lordy       588.00 CNY
     Assets:Budget:Gitee悬赏         -588.00 CNY
+
+2026-01-06 open Expenses:Bounty:管陈刚 
+
+** https://gitee.com/MulanRevive/mulan-rework/issues/I668SL
+2026-01-06 * "通过悬赏任务：【新手优先】交互中判断 finally 是否结束"
+    Expenses:Bounty:管陈刚             100.00 CNY
+    Assets:Budget:Gitee悬赏         -100.00 CNY
