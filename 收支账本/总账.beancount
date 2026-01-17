@@ -388,3 +388,8 @@ option "operating_currency" "CNY" ; The main currencies you use
 2026-01-06 * "通过悬赏任务：【新手优先】交互中判断 finally 是否结束"
     Expenses:Bounty:管陈刚             100.00 CNY
     Assets:Budget:Gitee悬赏         -100.00 CNY
+
+** https://gitee.com/MulanRevive/mulan-rework/issues/IANHYP
+2026-01-16 * "完成悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml"
+    Expenses:Bounty:贡献者lordy      218.00 CNY
+    Assets:Budget:Gitee悬赏         -218.00 CNY
