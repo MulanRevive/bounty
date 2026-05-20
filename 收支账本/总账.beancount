@@ -393,3 +393,40 @@ option "operating_currency" "CNY" ; The main currencies you use
 2026-01-16 * "完成悬赏任务：【探索原始木兰功能】木兰源码转换为 blockly xml"
     Expenses:Bounty:贡献者lordy      218.00 CNY
     Assets:Budget:Gitee悬赏         -218.00 CNY
+
+2026-05-12 open Expenses:Bounty:贡献者luoyong123321
+2026-05-12 open Expenses:Bounty:贡献者lonelywaiting
+
+2026-05-12 * "https://gitee.com/MulanRevive/mulan-rework/pulls/83"
+	Expenses:Bounty:贡献者luoyong123321	118.00 CNY
+	Assets:Budget:总预算             	-118.00 CNY
+
+2026-05-12 * "https://gitee.com/MulanRevive/mulan-rework/pulls/88 89"
+	Expenses:Bounty:贡献者lonelywaiting	236.00 CNY
+	Assets:Budget:总预算             	-236.00 CNY
+
+2026-05-15 * "https://gitee.com/MulanRevive/mulan-rework/pulls/108"
+	Expenses:Bounty:贡献者luoyong123321	1298.00 CNY
+	Assets:Budget:总预算             	-1298.00 CNY
+
+2026-05-18 * "https://gitee.com/MulanRevive/mulan-rework/pulls/134 137"
+	Expenses:Bounty:贡献者luoyong123321	236.00 CNY
+	Assets:Budget:总预算             	-236.00 CNY
+
+2026-05-18 open Expenses:Bounty:贡献者xumingqi444
+
+2026-05-18 * "https://gitee.com/MulanRevive/mulan-rework/pulls/91 92"
+	Expenses:Bounty:贡献者xumingqi444	246.00 CNY
+	Assets:Budget:总预算             	-246.00 CNY
+
+2026-05-18 open Expenses:Bounty:贡献者cuijiashuo
+
+2026-05-18 * "https://gitee.com/MulanRevive/mulan-rework/pulls/130"
+	Expenses:Bounty:贡献者cuijiashuo		118.00 CNY
+	Assets:Budget:总预算             	-118.00 CNY
+
+2026-05-19 open Expenses:Bounty:贡献者li-yi233
+
+2026-05-19 * "https://gitee.com/MulanRevive/mulan-rework/pulls/142"
+	Expenses:Bounty:贡献者li-yi233		118.00 CNY
+	Assets:Budget:总预算             	-118.00 CNY
