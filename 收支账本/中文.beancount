@@ -1,0 +1,29 @@
+option "title" "中文相关项目，如乘法口诀app"
+option "operating_currency" "CNY" ; The main currencies you use
+
+** Accounts ; Open all the accounts you have
+; all dates are Beijing time
+
+2020-01-25 open Assets:Budget:总预算 CNY
+2020-01-25 open Income:Donation:赞助者0 CNY
+
+** Opening Balances
+2026-05-10 * "Opening Balances"
+    Income:Donation:赞助者0             -10000.00 CNY
+    Assets:Budget:总预算                10000.00 CNY
+
+2026-05-20 open Expenses:Bounty:贡献者xuxutadie
+2026-05-20 open Expenses:Bounty:贡献者wybbb123123
+
+2026-05-20 * "https://github.com/XuanLLC/Chinese-Multiplication-Table/issues/1"
+	Expenses:Bounty:贡献者wybbb123123	400.00 CNY
+	Assets:Budget:总预算             	-400.00 CNY
+
+2026-05-20 * "https://github.com/XuanLLC/Chinese-Multiplication-Table/issues/3"
+	Expenses:Bounty:贡献者xuxutadie	400.00 CNY
+	Assets:Budget:总预算             	-400.00 CNY
+
+2026-05-20 * "https://github.com/XuanLLC/Chinese-Multiplication-Table/issues/5"
+	Expenses:Bounty:贡献者wybbb123123	400.00 CNY
+	Assets:Budget:总预算             	-400.00 CNY
+
